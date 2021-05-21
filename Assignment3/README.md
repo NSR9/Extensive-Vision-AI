@@ -75,8 +75,11 @@ We have run the model for 5 epochs and only mnist loss
 is used
 
 ## **Training Logs for the experimental model**
+<img width="1037" alt="Training Logs for Exp Model" src="https://user-images.githubusercontent.com/50147394/119186338-41571500-ba78-11eb-96c9-2f8e72b0c7ac.png">
 
 
 ## **Testing Logs for the experimental model**
+
+<img width="624" alt="Test logs for Exp Model" src="https://user-images.githubusercontent.com/50147394/119186378-5338b800-ba78-11eb-91d7-fb17ed520cf2.png">
 
 
