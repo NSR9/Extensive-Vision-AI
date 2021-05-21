@@ -56,9 +56,9 @@ If mnist accuracy falls below 95 then mnist loss will be used
 * Other sum loss is used
 * Experimented with couple of scenarios
   * using mnist_loss
-  * using using sum_loss
+  * using sum_loss
   * mnist_loss + sum_loss
-* Using loss in the following gave better results comapred to above 3 scenarios
+* Using loss combination of above scenarios gave better results while comparing the result with individual ones
 
 ## **Training Logs for the best model**
 
@@ -69,17 +69,8 @@ If mnist accuracy falls below 95 then mnist loss will be used
 
 ![Testing Logs](https://user-images.githubusercontent.com/50147394/119184617-e45a5f80-ba75-11eb-844c-6368ac093215.JPG)
 
-## **Loss Calculation for the experimental model**
 
-We have run the model for 5 epochs and only mnist loss
-is used
+## **Future upgrades** 
 
-## **Training Logs for the experimental model**
-<img width="1037" alt="Training Logs for Exp Model" src="https://user-images.githubusercontent.com/50147394/119186338-41571500-ba78-11eb-96c9-2f8e72b0c7ac.png">
-
-
-## **Testing Logs for the experimental model**
-
-<img width="624" alt="Test logs for Exp Model" src="https://user-images.githubusercontent.com/50147394/119186378-5338b800-ba78-11eb-91d7-fb17ed520cf2.png">
-
+* Randomize the intake of loss(MNIST_loss / Sum_loss/ Sum_loss + MNIST_loss) for the backward propagation to improve the training of the the model for a larger scenario and avoiding overfitting for large epochs.
 
