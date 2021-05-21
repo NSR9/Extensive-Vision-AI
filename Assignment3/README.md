@@ -1,3 +1,5 @@
+![Training Logs](https://user-images.githubusercontent.com/50147394/119184342-8af23080-ba75-11eb-87c7-7026e517767a.JPG)
+![Training Logs](https://user-images.githubusercontent.com/50147394/119184402-9ba2a680-ba75-11eb-94c7-c3f516f2c106.JPG)
 ---
 
 ---
@@ -53,7 +55,9 @@ The Random number taken is converted into a one Hot encoded vector for the given
 
 ## **Training Log**
 
+![Training Logs](https://user-images.githubusercontent.com/50147394/119184501-bc6afc00-ba75-11eb-9716-91e350e4d5a4.JPG)
 
 
 ## **Testing logs**
 
+![Testing Logs](https://user-images.githubusercontent.com/50147394/119184617-e45a5f80-ba75-11eb-844c-6368ac093215.JPG)
