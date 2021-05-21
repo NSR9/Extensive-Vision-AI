@@ -6,13 +6,13 @@
 
 We have written our neural network to solve the problem for the assignment. We have used the MNIST dataset and modified with adding the random no.
 
-## Data Representation
+## **Data Representation**
 
 The Data taken from MNIST data which contains images of digits in a 28X28 pixel representation  and the label column with the actual number associated with that image. We passed the loaded dataset into a Custom dataset Class, which is used to design our structured dataset. 
 
 The class contains three functions namely __init__(), __getitem__() and __len__(). The purpose of each self explanatory, __init__() - for initializing the dataset taken, __getitem__() to get the next element of the dataset and __len__() for the length. The resultant dataset coming out from the class is a 4 element output namely 
 
-The image tensor with shape {batch size}X1X28X28, 
+The image tensor with shape {batch size}X1X28X28. 
 * The random number one hot encoded tensor batchsizeX10
 * The label for the MNIST image 
 * The label for the sum value i.e. the random number + label of MNIST data. 
@@ -26,8 +26,26 @@ The Random number taken is converted into a one Hot encoded vector for the given
 
 
 
-## The network 
 
-1. Our network has 7 convolution layers and 2 max pooling layers before merging them to the 2 fully connected layers.
+
+
+## **Network Design**
+
+* Network:
+  * 7 conv layers
+  * 2 max pool layers
+  * 2 fully connected layers
+
+* Reason for 7 conv layers 
+  * kernel size 3
+  * increased output channels in multiple of 2
+  * 7th conv layers will give 10 outputs so that concatenation with encoded random tensor will of same dimemsion
+  * Adjusted padding so that 7th conv layer be give 10 outputs
+
+* Concatination of the two inputs:
+  * The output of the 7th conv layer contains the 10 tensor values of the MNIST image input
 
 ![Network Architecture](https://user-images.githubusercontent.com/50147394/119181866-7bbdb380-ba72-11eb-9f8d-8f0e5718380a.jpg)
+
+## Loss Calcualtion
+
