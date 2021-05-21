@@ -47,5 +47,8 @@ The Random number taken is converted into a one Hot encoded vector for the given
 
 ![Network Architecture](https://user-images.githubusercontent.com/50147394/119181866-7bbdb380-ba72-11eb-9f8d-8f0e5718380a.jpg)
 
+<<<<<<< HEAD
 ## Loss Calcualtion
+=======
+![Network Summary](https://user-images.githubusercontent.com/50147394/119182925-ae1be080-ba73-11eb-9117-076d2cd8157c.jpg)
 
