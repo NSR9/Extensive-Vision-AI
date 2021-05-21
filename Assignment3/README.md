@@ -74,3 +74,12 @@ If mnist accuracy falls below 95 then mnist loss will be used
 
 * Randomize the intake of loss(MNIST_loss / Sum_loss/ Sum_loss + MNIST_loss) for the backward propagation to improve the training of the the model for a larger scenario and avoiding overfitting for large epochs.
 
+
+## **Team Members**
+
+* Avinash Ravi
+* Ujjwal Gupta
+* Saroj Raj Das
+* Nandam Sriranga Chaitanya
+
+
