@@ -49,11 +49,34 @@ The Random number taken is converted into a one Hot encoded vector for the given
 
 ![Network Summary](https://user-images.githubusercontent.com/50147394/119182925-ae1be080-ba73-11eb-9117-076d2cd8157c.jpg)
 
-## **Training Log**
+## **Loss Calculation for the best model**
+
+If mnist accuracy falls below 95 then mnist loss will be used
+
+* Other sum loss is used
+* Experimented with couple of scenarios
+  * using mnist_loss
+  * using using sum_loss
+  * mnist_loss + sum_loss
+* Using loss in the following gave better results comapred to above 3 scenarios
+
+## **Training Logs for the best model**
 
 ![Training Logs](https://user-images.githubusercontent.com/50147394/119184501-bc6afc00-ba75-11eb-9716-91e350e4d5a4.JPG)
 
 
-## **Testing logs**
+## **Testing Logs for the best model**
 
 ![Testing Logs](https://user-images.githubusercontent.com/50147394/119184617-e45a5f80-ba75-11eb-844c-6368ac093215.JPG)
+
+## **Loss Calculation for the experimental model**
+
+We have run the model for 5 epochs and only mnist loss
+is used
+
+## **Training Logs for the experimental model**
+
+
+## **Testing Logs for the experimental model**
+
+
