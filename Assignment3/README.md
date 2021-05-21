@@ -4,11 +4,7 @@
 
 # Assignment 3
 
-We have written our neural network to solve the problem  We have used the MNIST dataset  
-
-1. take 2 inputs:
-   1. an image from MNIST dataset, and
-   2. a random number between 0 and 9
+We have written our neural network to solve the problem for the assignment. We have used the MNIST dataset and modified with adding the random no.
 
 ## Data Representation
 
@@ -33,4 +29,4 @@ The Random number taken is converted into a one Hot encoded vector for the given
 ## The network 
 
 1. Our network has 7 convolution layers and 2 max pooling layers before merging them to the 2 fully connected layers.
-2. 
+
