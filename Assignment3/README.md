@@ -1,6 +1,4 @@
----
 
----
 
 # Assignment 3
 
