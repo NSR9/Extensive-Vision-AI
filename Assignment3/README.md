@@ -1,5 +1,3 @@
-![Training Logs](https://user-images.githubusercontent.com/50147394/119184342-8af23080-ba75-11eb-87c7-7026e517767a.JPG)
-![Training Logs](https://user-images.githubusercontent.com/50147394/119184402-9ba2a680-ba75-11eb-94c7-c3f516f2c106.JPG)
 ---
 
 ---
