@@ -1,15 +1,15 @@
-## Problem Statement
+## **Problem Statement**
 
-### WRITE DOWN THE CODE FOR MNIST CLASSIFICATION WITH FOLLOWING CONSTRAINTS:-
+### **WRITE DOWN THE CODE FOR MNIST CLASSIFICATION WITH FOLLOWING CONSTRAINTS:-**
 * 99.4% validation accuracy
 * Less than 20k Parameters
 * You can use anything from above you want. 
 * Less than 20 Epochs
 * Have used BN, Dropout, a Fully connected layer, have used GAP. 
 
-## Proposed Network (Best Network):-
+## **Proposed Network (Best Network):-**
 
-### Network Block :
+### **Network Block :**
 
 #### Conv Block 1
 * 2D Convolution number of kernels 8, followed with Batch Normalization and 2D Dropout of 0.1
@@ -36,11 +36,9 @@
 #### Global Average Pooling
 * Global Average pooling with a size 3 and no Padding to return a 10 1 1 as the value to go to log_softmax
 
-## Model Summary:-
+## **Expirement Model Summary:-**
 
-### Expirement Model:-
-
-#### Model 1 Summary:-
+#### **Model 1 Summary:-**
 
 **Enhancements**
 
@@ -61,7 +59,7 @@
 * 1 x 1 Conv layers not used to reduce the number of channels 
 
 
-### Best Model Summary:-
+## **Best Model Summary:-**
 
 #### Enchancements to the Model:-
 
@@ -78,7 +76,7 @@
 
 ![image](https://user-images.githubusercontent.com/51078583/119997847-c9479c80-bfed-11eb-9028-a3edd9892116.png)
 
-#### Logs for Best Model:-
+### Logs for Best Model:-
 
     Test set: Average loss: 0.0749, Accuracy: 9765/10000 (97.65%)
 
@@ -155,11 +153,11 @@
     Test set: Average loss: 0.0188, Accuracy: 9940/10000 (99.40%)
 
 
-## Refernce Link:-
+## ** Refernce Link:-**
 
 [Kaggle]( https://www.kaggle.com/enwei26/mnist-digits-pytorch-cnn-99)
 
-## Contributors:-
+## **Contributors:-**
 
 1. Avinash Ravi 
 2. Nandam Sriranga Chaitanya
