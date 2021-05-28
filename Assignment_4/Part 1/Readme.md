@@ -78,7 +78,7 @@ ie: Input layer, hidden layer and output layer.
 	∂E_total/∂a_h1 = (a_o1 - t1)*a_o1*(1 - a_o1)*w5 + (a_o2 - t2)*a_o2*(1 - a_o2)*w7				
 	∂E_total/∂a_h2 = (a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8		
 
-        #Similarly these are the gradients of loss w.r.t w1, w2, w3, w4
+       #Similarly these are the gradients of loss w.r.t w1, w2, w3, w4
 	∂E_total/∂w1 = ∂E_total/∂a_h1*∂a_h1/∂h1*∂h1/∂w1									
 	∂E_total/∂w2 = ∂E_total/∂a_h1*∂a_h1/∂h1*∂h1/∂w2									
 	∂E_total/∂w3 = ∂E_total/∂a_h2*∂a_h2/∂h2*∂h2/∂w3		
