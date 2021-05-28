@@ -29,6 +29,7 @@ ie: Input layer, hidden layer and output layer.
 * E_Total is the total loss.
 
 #### Equations of the parameters
+ ## FORWARD PASS OF THE NETWORK
         # Weighted input obtained by multiplying the random weights
 	h1 = w1*i1+w2*i2		
 	h2 = w3*i1+w4*i2
@@ -55,7 +56,7 @@ ie: Input layer, hidden layer and output layer.
 	E2 = 1/2 * (t2 - a_o2)2		
 
 #### Calculation of Derivative of losses
-
+ ## BACKWARD PASS OF THE NETWORK
         #Calculation of gradient of loss w.r.t W5
 	∂E_total/∂w5 = ∂(E1 + E2)∂w5							
 	∂E_total/∂w5 = ∂E1/∂w5							
