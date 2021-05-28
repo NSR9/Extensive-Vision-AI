@@ -3,9 +3,8 @@
 ### **WRITE DOWN THE CODE FOR MNIST CLASSIFICATION WITH FOLLOWING CONSTRAINTS:-**
 * 99.4% validation accuracy
 * Less than 20k Parameters
-* You can use anything from above you want. 
 * Less than 20 Epochs
-* Have used BN, Dropout, a Fully connected layer, have used GAP. 
+* Can use BN, Dropout, a Fully connected layer, have used GAP. 
 
 ## **Proposed Network (Best Network):-**
 
@@ -44,7 +43,7 @@
        * Added Global average pooling to get output classes.
        * Use learning rate of 0.01 and momentum 0.9
        
-### Achived Goals:-
+### Goals Achieved:-
 * Parameters count reduced to as low as **15,970**
 * Achieved an highest accuracy of **99.50%** at the **16th Epoch**. Getting an accuracy of greater than **99.40%** for the first time at **12th epoch** itself.
 
