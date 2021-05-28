@@ -1,4 +1,4 @@
-## **Problem Statement**
+## **Part 1**
 
 ### **Rewrite the whole excel sheet showing backpropagation. Explain each major step, and write it on Github:-**
 * Use exactly the same values for all variables as used in the class
@@ -24,6 +24,7 @@ ie: Input layer, hidden layer and output layer.
 * a_h1 and a_h2 are the weighted inputs after activation function is applied.
 * o1 and o2 are the output layer values.
 * a_o1 and a_o2 are the outputs after activation is used.
+* t1 and t2 are the target values.
 * E1 and E2 are the losses for the outputs.
 * E_Total is the total loss.
 
