@@ -59,78 +59,78 @@
 
 #### Logs for Best Model:-
 
-Test set: Average loss: 0.0749, Accuracy: 9765/10000 (97.65%)
+    Test set: Average loss: 0.0749, Accuracy: 9765/10000 (97.65%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0400, Accuracy: 9877/10000 (98.77%)
+    Test set: Average loss: 0.0400, Accuracy: 9877/10000 (98.77%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0350, Accuracy: 9882/10000 (98.82%)
+    Test set: Average loss: 0.0350, Accuracy: 9882/10000 (98.82%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0300, Accuracy: 9902/10000 (99.02%)
+    Test set: Average loss: 0.0300, Accuracy: 9902/10000 (99.02%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0299, Accuracy: 9898/10000 (98.98%)
+    Test set: Average loss: 0.0299, Accuracy: 9898/10000 (98.98%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0273, Accuracy: 9899/10000 (98.99%)
+    Test set: Average loss: 0.0273, Accuracy: 9899/10000 (98.99%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0235, Accuracy: 9920/10000 (99.20%)
+    Test set: Average loss: 0.0235, Accuracy: 9920/10000 (99.20%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0214, Accuracy: 9934/10000 (99.34%)
+    Test set: Average loss: 0.0214, Accuracy: 9934/10000 (99.34%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0221, Accuracy: 9928/10000 (99.28%)
+    Test set: Average loss: 0.0221, Accuracy: 9928/10000 (99.28%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0222, Accuracy: 9922/10000 (99.22%)
+    Test set: Average loss: 0.0222, Accuracy: 9922/10000 (99.22%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0218, Accuracy: 9927/10000 (99.27%)
+    Test set: Average loss: 0.0218, Accuracy: 9927/10000 (99.27%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0206, Accuracy: 9935/10000 (99.35%)
+    Test set: Average loss: 0.0206, Accuracy: 9935/10000 (99.35%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0219, Accuracy: 9927/10000 (99.27%)
+    Test set: Average loss: 0.0219, Accuracy: 9927/10000 (99.27%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0222, Accuracy: 9925/10000 (99.25%)
+    Test set: Average loss: 0.0222, Accuracy: 9925/10000 (99.25%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0205, Accuracy: 9933/10000 (99.33%)
+    Test set: Average loss: 0.0205, Accuracy: 9933/10000 (99.33%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0179, Accuracy: 9944/10000 (99.44%)
+    Test set: Average loss: 0.0179, Accuracy: 9944/10000 (99.44%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0191, Accuracy: 9939/10000 (99.39%)
+    Test set: Average loss: 0.0191, Accuracy: 9939/10000 (99.39%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0194, Accuracy: 9929/10000 (99.29%)
+    Test set: Average loss: 0.0194, Accuracy: 9929/10000 (99.29%)
 
-HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
+    HBox(children=(FloatProgress(value=0.0, max=469.0), HTML(value='')))
 
-Test set: Average loss: 0.0188, Accuracy: 9940/10000 (99.40%)
+    Test set: Average loss: 0.0188, Accuracy: 9940/10000 (99.40%)
 
 
