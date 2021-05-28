@@ -11,6 +11,8 @@
 
 ### **Network Block :**
 
+![image](https://user-images.githubusercontent.com/51078583/120019024-8f829000-c005-11eb-8e6d-2756b71a4f72.png)
+
 #### Conv Block 1
 * 2D Convolution number of kernels 8, followed with Batch Normalization and 2D Dropout of 0.1 
 * 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.1
