@@ -10,14 +10,14 @@
 * Submit details to S4 - Assignment QnA. 
 
 #### **Flow Diagram:-**
-![Flow diagram](https://user-images.githubusercontent.com/50147394/120015542-b8922900-bfe3-11eb-8937-d6d8805424fd.png)
+![Flow Diagram](https://user-images.githubusercontent.com/50147394/120021125-f3e42600-bfea-11eb-8108-2184f18e7a0d.png)
 
 
-#### Explaining the network:
+#### Network Architecture:-
 * There are 3 layers in the network 
 ie: Input layer, hidden layer and output layer.
 
-#### Explaining parameters: 
+#### Naming Convention of the Network Parameters:- 
 * i1 and i2 are the inputs from the input layer.
 * w1,w2....w8 are the randomly initialized weights used in the network.
 * h1 and h2 are the weighted inputs.
@@ -28,8 +28,8 @@ ie: Input layer, hidden layer and output layer.
 * E1 and E2 are the losses for the outputs.
 * E_Total is the total loss.
 
-#### Equations of the parameters
- ## FORWARD PASS OF THE NETWORK
+
+ #### Forward Pass of the network:-
         # Weighted input obtained by multiplying the random weights
 	h1 = w1*i1+w2*i2		
 	h2 = w3*i1+w4*i2
@@ -55,8 +55,8 @@ ie: Input layer, hidden layer and output layer.
 	# Calculating the loss of classifying as t2
 	E2 = 1/2 * (t2 - a_o2)2		
 
-#### Calculation of Derivative of losses
- ## BACKWARD PASS OF THE NETWORK
+
+ #### Backward Pass of the network:-
         #Calculation of gradient of loss w.r.t W5
 	∂E_total/∂w5 = ∂(E1 + E2)∂w5							
 	∂E_total/∂w5 = ∂E1/∂w5							
@@ -90,12 +90,12 @@ ie: Input layer, hidden layer and output layer.
 	∂E_total/∂w3 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8)*a_h2*(1 - a_h2)*i1									
 	∂E_total/∂w4 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8)*a_h2*(1 - a_h2)*i2									
 
-#### Screenshot of the Excel file uploaded
+#### Screenshot of the Excel file uploaded:-
 
-![Excel work](https://user-images.githubusercontent.com/50147394/120016271-af558c00-bfe4-11eb-8c11-4b6d00327d1a.png)
+![Excel Work](https://user-images.githubusercontent.com/50147394/120021228-11b18b00-bfeb-11eb-998e-d05564e51074.png)
 
 
-#### Total Loss Graph for various learning rates(η)
+#### Total Loss Graph for various learning rates(η):-
 
 ![Total Loss Graph](https://user-images.githubusercontent.com/50147394/120014884-e0cd5800-bfe2-11eb-93e8-95a99d86c4eb.png)
 
