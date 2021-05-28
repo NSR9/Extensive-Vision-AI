@@ -10,6 +10,7 @@
 * Submit details to S4 - Assignment QnA. 
 
 #### **Flow Diagram:-**
+![Flow diagram](https://user-images.githubusercontent.com/50147394/120015542-b8922900-bfe3-11eb-8937-d6d8805424fd.png)
 
 
 #### Explaining the network:
@@ -27,46 +28,61 @@ ie: Input layer, hidden layer and output layer.
 * E_Total is the total loss.
 
 #### Equations of the parameters
-h1 = w1*i1+w2*i2		
-h2 = w3*i1+w4*i2		
-a_h1 = σ(h1) = 1/(1+exp(-h1))		
-a_h2 = σ(h2)		
-o1 = w5*a_h1+w6*a_h2		
-o2 = w7*a_h1+w8*a_h2		
-a_o1 = σ(o1)		
-a_o2 = σ(o2)		
-E_total = E1 + E2		
-E1 = 1/2 * (t1 - a_o1)2		
-E2 = 1/2 * (t2 - a_o2)2		
+	h1 = w1*i1+w2*i2		
+	h2 = w3*i1+w4*i2
+	
+	a_h1 = σ(h1) = 1/(1+exp(-h1))		
+	a_h2 = σ(h2)		
+	
+	o1 = w5*a_h1+w6*a_h2		
+	o2 = w7*a_h1+w8*a_h2		
+	
+	a_o1 = σ(o1)		
+	a_o2 = σ(o2)		
+	
+	E_total = E1 + E2		
+	E1 = 1/2 * (t1 - a_o1)2		
+	E2 = 1/2 * (t2 - a_o2)2		
 
 #### Calculation of Derivative of losses
 
-∂E_total/∂w5 = ∂(E1 + E2)∂w5							
-∂E_total/∂w5 = ∂E1/∂w5							
-∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1*∂a_o1/∂o1*∂o1/∂w5							
-∂E1/∂a_o1 = ∂(1/2*(t1 - a1_o1)2)/∂a_o1 = (a_o1 - t1)							
-∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = a_o1*(1 - a_o1)							
-∂o1/∂w5 = a_h1							
-							
-∂E_total/∂E5 = (a_o1 - t1)*a_o1*(1 - a_o1)*a_h1							
-∂E_total/∂E6 = (a_o1 - t1)*a_o1*(1 - a_o1)*a_h2							
-∂E_total/∂E7 = (a_o2 - t2)*a_o2*(1 - a_o2)*a_h1							
-∂E_total/∂E8 = (a_o2 - t2)*a_o2*(1 - a_o2)*a_h2							
-							
-∂E1/∂a_h1 = (a_o1 - t1)*a_o1*(1 - a_o1)*w5							
-∂E2/∂a_h1 = (a_o2 - t2)*a_o2*(1 - a_o2)*w7							
-∂E_total/∂a_h1 = (a_o1 - t1)*a_o1*(1 - a_o1)*w5 + (a_o2 - t2)*a_o2*(1 - a_o2)*w7							
-							
-∂E_total/∂a_h2 = (a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8		
+	∂E_total/∂w5 = ∂(E1 + E2)∂w5							
+	∂E_total/∂w5 = ∂E1/∂w5							
+	∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1*∂a_o1/∂o1*∂o1/∂w5							
+	∂E1/∂a_o1 = ∂(1/2*(t1 - a1_o1)2)/∂a_o1 = (a_o1 - t1)							
+	∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = a_o1*(1 - a_o1)							
+	∂o1/∂w5 = a_h1							
 
-∂E_total/∂w1 = ∂E_total/∂a_h1*∂a_h1/∂h1*∂h1/∂w1									
-∂E_total/∂w2 = ∂E_total/∂a_h1*∂a_h1/∂h1*∂h1/∂w2									
-∂E_total/∂w3 = ∂E_total/∂a_h2*∂a_h2/∂h2*∂h2/∂w3									
-									
-∂E_total/∂w1 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w5 + (a_o2 - t2)*a_o2*(1 - a_o2)*w7)*a_h1*(1 - a_h1)*i1									
-∂E_total/∂w2 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w5 + (a_o2 - t2)*a_o2*(1 - a_o2)*w7)*a_h1*(1 - a_h1)*i2									
-∂E_total/∂w3 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8)*a_h2*(1 - a_h2)*i1									
-∂E_total/∂w4 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8)*a_h2*(1 - a_h2)*i2									
+	∂E_total/∂w5 = (a_o1 - t1)*a_o1*(1 - a_o1)*a_h1							
+	∂E_total/∂w6 = (a_o1 - t1)*a_o1*(1 - a_o1)*a_h2							
+	∂E_total/∂w7 = (a_o2 - t2)*a_o2*(1 - a_o2)*a_h1							
+	∂E_total/∂w8 = (a_o2 - t2)*a_o2*(1 - a_o2)*a_h2							
+
+	∂E1/∂a_h1 = (a_o1 - t1)*a_o1*(1 - a_o1)*w5							
+	∂E2/∂a_h1 = (a_o2 - t2)*a_o2*(1 - a_o2)*w7
+	
+	∂E_total/∂a_h1 = (a_o1 - t1)*a_o1*(1 - a_o1)*w5 + (a_o2 - t2)*a_o2*(1 - a_o2)*w7				
+	∂E_total/∂a_h2 = (a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8		
+
+	∂E_total/∂w1 = ∂E_total/∂a_h1*∂a_h1/∂h1*∂h1/∂w1									
+	∂E_total/∂w2 = ∂E_total/∂a_h1*∂a_h1/∂h1*∂h1/∂w2									
+	∂E_total/∂w3 = ∂E_total/∂a_h2*∂a_h2/∂h2*∂h2/∂w3		
+	∂E_total/∂w4 = ∂E_total/∂a_h2*∂a_h2/∂h2*∂h2/∂w4	
+
+	∂E_total/∂w1 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w5 + (a_o2 - t2)*a_o2*(1 - a_o2)*w7)*a_h1*(1 - a_h1)*i1									
+	∂E_total/∂w2 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w5 + (a_o2 - t2)*a_o2*(1 - a_o2)*w7)*a_h1*(1 - a_h1)*i2									
+	∂E_total/∂w3 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8)*a_h2*(1 - a_h2)*i1									
+	∂E_total/∂w4 = ((a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8)*a_h2*(1 - a_h2)*i2									
+
+#### Screenshot of the Excel file uploaded
+
+![Excel work](https://user-images.githubusercontent.com/50147394/120016271-af558c00-bfe4-11eb-8c11-4b6d00327d1a.png)
+
+
+#### Total Loss Graph for various learning rates(η)
+
+![Total Loss Graph](https://user-images.githubusercontent.com/50147394/120014884-e0cd5800-bfe2-11eb-93e8-95a99d86c4eb.png)
+
 
 
 ## **Contributors:-**
