@@ -18,8 +18,8 @@
 ie: Input layer, hidden layer and output layer.
 
 #### Explaining parameters: 
-* i1 and i2 are the values in the input layer.
-* w1,w2....w8 are the weights used in the network.
+* i1 and i2 are the inputs from the input layer.
+* w1,w2....w8 are the randomly initialized weights used in the network.
 * h1 and h2 are the weighted inputs.
 * a_h1 and a_h2 are the weighted inputs after activation function is applied.
 * o1 and o2 are the output layer values.
@@ -29,32 +29,45 @@ ie: Input layer, hidden layer and output layer.
 * E_Total is the total loss.
 
 #### Equations of the parameters
+        # Weighted input obtained by multiplying the random weights
 	h1 = w1*i1+w2*i2		
 	h2 = w3*i1+w4*i2
 	
+	# These are the activated weighted inputs
 	a_h1 = σ(h1) = 1/(1+exp(-h1))		
 	a_h2 = σ(h2)		
 	
+	#The activated weighted inputs from the previous layer are again transformed linearly 
 	o1 = w5*a_h1+w6*a_h2		
 	o2 = w7*a_h1+w8*a_h2		
 	
+	# Activating the newly generated weighted inputs from the previous layer
 	a_o1 = σ(o1)		
 	a_o2 = σ(o2)		
 	
-	E_total = E1 + E2		
-	E1 = 1/2 * (t1 - a_o1)2		
+	# Calculating the total loss is sum of loss of individual classifications
+	E_total = E1 + E2	
+	
+	# calculating the loss of classifying as t1
+	E1 = 1/2 * (t1 - a_o1)2	
+	
+	# Calculating the loss of classifying as t2
 	E2 = 1/2 * (t2 - a_o2)2		
 
 #### Calculation of Derivative of losses
 
+        #Calculation of gradient of loss w.r.t W5
 	∂E_total/∂w5 = ∂(E1 + E2)∂w5							
 	∂E_total/∂w5 = ∂E1/∂w5							
-	∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1*∂a_o1/∂o1*∂o1/∂w5							
+	∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1 * ∂a_o1/∂o1 * ∂o1/∂w5
+	
 	∂E1/∂a_o1 = ∂(1/2*(t1 - a1_o1)2)/∂a_o1 = (a_o1 - t1)							
 	∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = a_o1*(1 - a_o1)							
 	∂o1/∂w5 = a_h1							
 
-	∂E_total/∂w5 = (a_o1 - t1)*a_o1*(1 - a_o1)*a_h1							
+	∂E_total/∂w5 = (a_o1 - t1)*a_o1*(1 - a_o1)*a_h1	
+	
+	#Similarly these are the gradients of loss w.r.t w6, w7, w8
 	∂E_total/∂w6 = (a_o1 - t1)*a_o1*(1 - a_o1)*a_h2							
 	∂E_total/∂w7 = (a_o2 - t2)*a_o2*(1 - a_o2)*a_h1							
 	∂E_total/∂w8 = (a_o2 - t2)*a_o2*(1 - a_o2)*a_h2							
@@ -65,6 +78,7 @@ ie: Input layer, hidden layer and output layer.
 	∂E_total/∂a_h1 = (a_o1 - t1)*a_o1*(1 - a_o1)*w5 + (a_o2 - t2)*a_o2*(1 - a_o2)*w7				
 	∂E_total/∂a_h2 = (a_o1 - t1)*a_o1*(1 - a_o1)*w6 + (a_o2 - t2)*a_o2*(1 - a_o2)*w8		
 
+        #Similarly these are the gradients of loss w.r.t w1, w2, w3, w4
 	∂E_total/∂w1 = ∂E_total/∂a_h1*∂a_h1/∂h1*∂h1/∂w1									
 	∂E_total/∂w2 = ∂E_total/∂a_h1*∂a_h1/∂h1*∂h1/∂w2									
 	∂E_total/∂w3 = ∂E_total/∂a_h2*∂a_h2/∂h2*∂h2/∂w3		
