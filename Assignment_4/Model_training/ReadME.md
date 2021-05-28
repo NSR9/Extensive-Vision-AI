@@ -40,6 +40,27 @@
 
 ### Expirement Model:-
 
+#### Model 1 Summary:-
+
+**Enhancements**
+
+* Activation Function as ReLU is used after conv layers
+* MaxPool Layer of 2 x 2 is used twice in the network.
+* Added batch normalization after every conv layer
+* Added dropout of 0.069 after each conv layer
+* Added Global average pooling before the FC layer and then added the FC to get output classes.
+* Use learning rate of 0.02 and momentum 0.8
+
+* **Paramerters Used** - **14,906** 
+* **Best Accuracy** - **99.49% at the 16th Epoch**
+
+![image](https://user-images.githubusercontent.com/51078583/120001574-8daed180-bff1-11eb-90ae-291d5cfc5ed0.png)
+
+**Drawbacks**
+* Fully connected layers are used. 
+* 1 x 1 Conv layers not used to reduce the number of channels 
+
+
 ### Best Model Summary:-
 
 #### Enchancements to the Model:-
@@ -133,4 +154,15 @@
 
     Test set: Average loss: 0.0188, Accuracy: 9940/10000 (99.40%)
 
+
+## Refernce Link:-
+
+[Kaggle]( https://www.kaggle.com/enwei26/mnist-digits-pytorch-cnn-99)
+
+## Contributors:-
+
+1. Avinash Ravi 
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
 
