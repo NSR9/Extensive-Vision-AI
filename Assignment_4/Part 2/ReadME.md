@@ -155,7 +155,7 @@
 * 1 x 1 Conv layers not used to reduce the number of channels 
 
 
-## **Experiment Model 2 Summary:-**
+### **Experiment Model 2 Summary:-**
 
 **Enhancements**
 
