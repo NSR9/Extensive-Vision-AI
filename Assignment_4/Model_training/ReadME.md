@@ -42,12 +42,12 @@
 
 **Enhancements**
 
-* Activation Function as ReLU is used after conv layers
-* MaxPool Layer of 2 x 2 is used twice in the network.
-* Added batch normalization after every conv layer
-* Added dropout of 0.069 after each conv layer
-* Added Global average pooling before the FC layer and then added the FC to get output classes.
-* Use learning rate of 0.02 and momentum 0.8
+Activation Function as ReLU is used after conv layers
+MaxPool Layer of 2 x 2 is used twice in the network.
+Added batch normalization after every conv layer
+Added dropout of 0.069 after each conv layer
+Added Global average pooling before the FC layer and then added the FC to get output classes.
+Use learning rate of 0.02 and momentum 0.8
 
 * **Paramerters Used** - **14,906** 
 * **Best Accuracy** - **99.49% at the 16th Epoch**
@@ -63,13 +63,13 @@
 
 #### Enchancements to the Model:-
 
-* Activation Function as ReLU is used after conv layers
-* MaxPool Layer of 2 x 2 is used twice in the network.
-* Conv 1 x 1 is used in the transition layer for reducing the number of channels
-* Added batch normalization after every conv layer
-* Added dropout of 0.1 after each conv layer
-* Added Global average pooling to get output classes.
-* Use learning rate of 0.01 and momentum 0.9
+Activation Function as ReLU is used after conv layers
+MaxPool Layer of 2 x 2 is used twice in the network.
+Conv 1 x 1 is used in the transition layer for reducing the number of channels
+Added batch normalization after every conv layer
+Added dropout of 0.1 after each conv layer
+Added Global average pooling to get output classes.
+Use learning rate of 0.01 and momentum 0.9
 
 * **Paramerters Used** - **19,750** 
 * **Best Accuracy** - **99.44% at the 16th Epoch**
