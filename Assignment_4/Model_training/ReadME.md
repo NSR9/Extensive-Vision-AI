@@ -15,24 +15,19 @@
 * 2D Convolution number of kernels 8, followed with Batch Normalization and 2D Dropout of 0.1
 * 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.1
 * 2D Convolution number of kernels 32, followed with Batch Normalization and 2D Dropout of 0.1
-
 #### Transition Layer 1
 * 2D Max Pooling to reduce the size of the channel to 14
 * 2d Convolution with kernel size 1 reducing the number of channels to 8
-
 #### Conv Block 2
 * 2D Convolution number of kernels 12, followed with Batch Normalization and 2D Dropout of 0.1
 * 2D Convolution number of kernels 24, followed with Batch Normalization and 2D Dropout of 0.1
 * 2D Convolution number of kernels 32, followed with Batch Normalization and 2D Dropout of 0.1
-
 #### Transition Layer 2
 * 2D Max Pooling to reduce the size of the channel to 7
 * 2d Convolution with kernel size 1 reducing the number of channels to 8
-
 #### Conv Block 3
 * 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.1
 * 2D Convolution number of kernels 10 (Avoid Batch Normalization and Dropout in Last layer before GAP)
-
 #### Global Average Pooling
 * Global Average pooling with a size 3 and no Padding to return a 10 1 1 as the value to go to log_softmax
 
@@ -42,12 +37,12 @@
 
 **Enhancements**
 
-Activation Function as ReLU is used after conv layers
-MaxPool Layer of 2 x 2 is used twice in the network.
-Added batch normalization after every conv layer
-Added dropout of 0.069 after each conv layer
-Added Global average pooling before the FC layer and then added the FC to get output classes.
-Use learning rate of 0.02 and momentum 0.8
+        * Activation Function as ReLU is used after conv layers
+        * MaxPool Layer of 2 x 2 is used twice in the network.
+        * Added batch normalization after every conv layer
+        * Added dropout of 0.069 after each conv layer
+        * Added Global average pooling before the FC layer and then added the FC to get output classes.
+        * Use learning rate of 0.02 and momentum 0.8
 
 * **Paramerters Used** - **14,906** 
 * **Best Accuracy** - **99.49% at the 16th Epoch**
@@ -63,13 +58,13 @@ Use learning rate of 0.02 and momentum 0.8
 
 #### Enchancements to the Model:-
 
-Activation Function as ReLU is used after conv layers
-MaxPool Layer of 2 x 2 is used twice in the network.
-Conv 1 x 1 is used in the transition layer for reducing the number of channels
-Added batch normalization after every conv layer
-Added dropout of 0.1 after each conv layer
-Added Global average pooling to get output classes.
-Use learning rate of 0.01 and momentum 0.9
+        * Activation Function as ReLU is used after conv layers
+        * MaxPool Layer of 2 x 2 is used twice in the network.
+        * Conv 1 x 1 is used in the transition layer for reducing the number of channels
+        * Added batch normalization after every conv layer
+        * Added dropout of 0.1 after each conv layer
+        * Added Global average pooling to get output classes.
+        * Use learning rate of 0.01 and momentum 0.9
 
 * **Paramerters Used** - **19,750** 
 * **Best Accuracy** - **99.44% at the 16th Epoch**
@@ -153,7 +148,7 @@ Use learning rate of 0.01 and momentum 0.9
     Test set: Average loss: 0.0188, Accuracy: 9940/10000 (99.40%)
 
 
-## ** Refernce Link:-**
+## **Refernce Link:-**
 
 [Kaggle]( https://www.kaggle.com/enwei26/mnist-digits-pytorch-cnn-99)
 
