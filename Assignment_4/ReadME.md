@@ -6,8 +6,7 @@
 
 ## Part 2
 
-### Train MNIST Dataset to Achieve a goal of more than 99.40% in less than 20 Epochs and less than 20K Parameters. 
-
+### Train MNIST Dataset to Achieve a goal of more than 99.40% in less than 20 Epochs and less than 20K Parameters
 
 ## Contributors
 
