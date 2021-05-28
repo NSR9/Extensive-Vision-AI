@@ -45,7 +45,8 @@
        
 ### Goals Achieved:-
 * Parameters count reduced to as low as **15,970**
-* Achieved an highest accuracy of **99.50%** at the **16th Epoch**. Getting an accuracy of greater than **99.40%** for the first time at **12th epoch** itself.
+* Achieved an highest accuracy of **99.50%** at the **18th Epoch**. Getting an accuracy of greater than **99.40%** for the first time at **12th epoch** itself. 
+* Achieved a final Accuracy of **99.47%** after 19 Epochs.
 
 ![image](https://user-images.githubusercontent.com/51078583/120013438-598ddd80-bffe-11eb-9198-771222359f61.png)
 
