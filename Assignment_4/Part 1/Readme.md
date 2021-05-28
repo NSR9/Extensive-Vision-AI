@@ -30,7 +30,7 @@ ie: Input layer, hidden layer and output layer.
 
 
  #### Forward Pass of the network:-
-        # Weighted input obtained by multiplying the random weights
+    # Weighted input obtained by multiplying the random weights
 	h1 = w1*i1+w2*i2		
 	h2 = w3*i1+w4*i2
 	
@@ -57,7 +57,7 @@ ie: Input layer, hidden layer and output layer.
 
 
  #### Backward Pass of the network:-
-        #Calculation of gradient of loss w.r.t W5
+    #Calculation of gradient of loss w.r.t W5
 	∂E_total/∂w5 = ∂(E1 + E2)∂w5							
 	∂E_total/∂w5 = ∂E1/∂w5							
 	∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1 * ∂a_o1/∂o1 * ∂o1/∂w5
