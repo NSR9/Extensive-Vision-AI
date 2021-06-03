@@ -1,6 +1,6 @@
-## **Problem Statement**
+## **Problem Statement:-**
 
-## **Step Models**
+## **Step Models:-**
 
 ### Feature Implementation in Step models:-
 
@@ -8,15 +8,23 @@
 
 ## **Proposed Network (Best Network):-**
 
-## Model Summary
+## Model Summary:-
 
-### Goals Achived
+### Goals Achived:-
 
-### Logs of Final Model
+### Logs of Final Model:-
 
-## Refernces
+## Statistics:-
+
+### Confusion Matrix:-
+
+### Training-Validation Curve:-
+
+### Incorrect images:-
+
+## Refernces:-
 
 * https://pytorch.org/vision/stable/transforms.html
 * https://medium.com/secure-and-private-ai-writing-challenge/data-augmentation-increases-accuracy-of-your-model-but-how-aa1913468722
 
-## Contributors
+## Contributors:-
