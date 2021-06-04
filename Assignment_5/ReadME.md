@@ -47,13 +47,13 @@
 |Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
 |--|--|--|--|--|--|--|--|--|--|--|
 
-## **Proposed Network (Best Network):-**
+## **Proposed Network (Best Network - Notebook_4):-**
 
-### **Network Block:-*
+### **Network Block:-**
 #### Conv Block 1
 * 2D Convolution number of kernels 8, followed with Batch Normalization and 2D Dropout of 0.05
 * 2D Convolution number of kernels 8, followed with Batch Normalization and 2D Dropout of 0.05
-#### Transition Layer 1¶
+#### Transition Layer 1
 * 2D Max Pooling to reduce the size of the channel to 12
 #### Conv Block 2
 * 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
@@ -81,59 +81,45 @@ In the Notebook 3 we achieved the goal of 99.4% accuracy. But the model was not 
 Epoch1 : Loss=0.18589811027050018  Accuracy=83.81 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.89it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0872, Accuracy: 9812/10000 (98.12%)
-
 Epoch2 : Loss=0.05694916471838951  Accuracy=97.15 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.33it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0611, Accuracy: 9839/10000 (98.39%)
-
 Epoch3 : Loss=0.1879713386297226  Accuracy=97.75 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.67it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0364, Accuracy: 9902/10000 (99.02%)
-
 Epoch4 : Loss=0.1543048620223999  Accuracy=98.03 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.46it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0335, Accuracy: 9907/10000 (99.07%)
-
 Epoch5 : Loss=0.04255908727645874  Accuracy=98.21 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.08it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0298, Accuracy: 9918/10000 (99.18%)
-
 Epoch6 : Loss=0.04420612379908562  Accuracy=98.38 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.41it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0274, Accuracy: 9927/10000 (99.27%)
-
 Epoch7 : Loss=0.014818566851317883  Accuracy=98.53 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.40it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0212, Accuracy: 9940/10000 (99.40%)
-
 Epoch8 : Loss=0.04427675902843475  Accuracy=98.68 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 29.85it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0206, Accuracy: 9942/10000 (99.42%)
-
 Epoch9 : Loss=0.061607468873262405  Accuracy=98.67 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.77it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0196, Accuracy: 9942/10000 (99.42%)
-
 Epoch10 : Loss=0.04594561830163002  Accuracy=98.69 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.69it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0193, Accuracy: 9943/10000 (99.43%)
-
 Epoch11 : Loss=0.013693585060536861  Accuracy=98.72 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.68it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0190, Accuracy: 9947/10000 (99.47%)
-
 Epoch12 : Loss=0.026162752881646156  Accuracy=98.72 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.50it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0193, Accuracy: 9943/10000 (99.43%)
-
 Epoch13 : Loss=0.03216176852583885  Accuracy=98.75 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.94it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0189, Accuracy: 9944/10000 (99.44%)
-
 Epoch14 : Loss=0.032220084220170975  Accuracy=98.81 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 30.92it/s]
   0%|          | 0/469 [00:00<?, ?it/s]
 Test set: Average loss: 0.0186, Accuracy: 9941/10000 (99.41%)
-
 Epoch15 : Loss=0.039210837334394455  Accuracy=98.80 Batch_id=468: 100%|██████████| 469/469 [00:15<00:00, 31.20it/s]
 Test set: Average loss: 0.0186, Accuracy: 9941/10000 (99.41%)
 ```
