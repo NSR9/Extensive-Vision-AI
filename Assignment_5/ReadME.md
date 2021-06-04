@@ -1,5 +1,13 @@
 ## **Problem Statement:-**
 
+Your new target is:
+* 99.4% (this must be consistently shown in your last few epochs, and not a one-time achievement)
+* Less than or equal to 15 Epochs
+* Less than 10000 Parameters (additional points for doing this in less than 8000 pts)
+* Do this in exactly 3 steps
+* Each File must have "target, result, analysis" TEXT block (either at the start or the end)
+* Keep Receptive field calculations handy for each of your models. 
+
 ## **Step Models:-**
 ### **Target, Result and Analysis of Step models:-**
 
@@ -30,21 +38,7 @@
 
 <img src="https://user-images.githubusercontent.com/51078583/120814031-17b7e680-c56c-11eb-8a87-7bd01dd2c849.png" width=400 height=400>
 
-#### Notebook-1
-[Notebook_1(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/NoteBook_1_Low_params_5.0KParams.ipynb)
-|Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
-|--|--|--|--|--|--|--|--|--|--|--|
-|1|28x28|28x28|1|8|1|0|1|1|1x1|3x3|
-|1|28x28|28x28|1|8|1|0|1|1|1x1|3x3|
-#### Notebook-2
-[Notebook_2(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/NoteBook_2_Dropout&BN_8KParams.ipynb)
-|Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
-|--|--|--|--|--|--|--|--|--|--|--|
-#### Notebook-3
-[Notebook_3(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/Notebook_3_Image_augumentation_8.4Kparams.ipynb)
-|Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
-|--|--|--|--|--|--|--|--|--|--|--|
-#### Notebook-4
+#### Final Notebook
 [Notebook_4(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/Notebook_4(Final)_StepLR_7.5KParam.ipynb)
 |Operation|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
 |--|--|--|--|--|--|--|--|--|--|--|
@@ -56,7 +50,7 @@
 |Convolution|10x10|8x8|10|10|0|1|2|2|14x14|18x18|
 |Convolution|8x8|6x6|10|16|0|1|2|2|18x18|22x22|
 |Convolution|6x6|4x4|16|16|0|1|2|2|22x22|26x26|
-|GAP|4x4|1x1|16|16|1|1|2|2|26x26|36x36|
+|GAP|4x4|1x1|16|16|1|6|2|2|26x26|36x36|
 |Convolution|1x1|1x1|16|10|0|1|2|2|36x36|36x36|
 
 ## **Proposed Network (Best Network - Notebook_4):-**
