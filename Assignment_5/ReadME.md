@@ -46,18 +46,18 @@
 |--|--|--|--|--|--|--|--|--|--|--|
 #### Notebook-4
 [Notebook_4(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/Notebook_4(Final)_StepLR_7.5KParam.ipynb)
-|Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
+|Operation|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
 |--|--|--|--|--|--|--|--|--|--|--|
-|1|28x28|28x28|1|8|1|0|1|1|1x1|3x3|
-|2|28x28|28x28|8|8|1|0|1|1|3x3|5x5|
-|3|28x28|14x14|8|8|0|2|1|2|5x5|6x6|
-|4|14x14|12x12|8|10|0|1|2|2|6x6|10x10|
-|5|12x12|10x10|10|10|0|1|2|2|10x10|14x14|
-|6|10x10|8x8|10|10|0|1|2|2|14x14|18x18|
-|7|8x8|6x6|10|16|0|1|2|2|18x18|22x22|
-|8|6x6|4x4|16|16|0|1|2|2|22x22|26x26|
-|9|4x4|1x1|16|16|1|1|2|2|26x26|36x36|
-|10|1x1|1x1|16|10|0|1|2|2|36x36|36x36|
+|Convolution|28x28|28x28|1|8|1|0|1|1|1x1|3x3|
+|Convolution|28x28|28x28|8|8|1|0|1|1|3x3|5x5|
+|Max Pool|28x28|14x14|8|8|0|2|1|2|5x5|6x6|
+|Convolution|14x14|12x12|8|10|0|1|2|2|6x6|10x10|
+|Convolution|12x12|10x10|10|10|0|1|2|2|10x10|14x14|
+|Convolution|10x10|8x8|10|10|0|1|2|2|14x14|18x18|
+|Convolution|8x8|6x6|10|16|0|1|2|2|18x18|22x22|
+|Convolution|6x6|4x4|16|16|0|1|2|2|22x22|26x26|
+|GAP|4x4|1x1|16|16|1|1|2|2|26x26|36x36|
+|Convolution|1x1|1x1|16|10|0|1|2|2|36x36|36x36|
 
 ## **Proposed Network (Best Network - Notebook_4):-**
 
