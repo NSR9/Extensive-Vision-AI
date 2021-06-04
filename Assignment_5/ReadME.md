@@ -55,6 +55,11 @@ Your new target is:
 
 ## **Proposed Network (Best Network - Notebook_4):-**
 
+### **Network Diagram:-**
+
+![Network Diagram](https://user-images.githubusercontent.com/50147394/120842177-a9275880-c56c-11eb-82bd-3bea15401348.png)
+
+
 ### **Network Block:-**
 #### Conv Block 1
 * 2D Convolution number of kernels 8, followed with Batch Normalization and 2D Dropout of 0.05
@@ -65,12 +70,12 @@ Your new target is:
 * 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
 * 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
 * 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
-* 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.1
-* 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.1
+* 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.05
+* 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.05
 #### Global Average Pooling
 * Global Average pooling with a size 6 and Padding 1 to return a 16 x 1 x 1 as output dimensions
 #### Conv Block 3
-* 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.1
+* 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
 
 ## Model Summary:-
 ![image](https://user-images.githubusercontent.com/51078583/120816521-72ead880-c56e-11eb-9c11-d0b1682fff2d.png)
