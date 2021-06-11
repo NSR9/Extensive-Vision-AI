@@ -17,6 +17,29 @@ Create these graphs:
 
 Find 20 misclassified images for each of the 3 models, and show them as a 5x4 image matrix in 3 separately annotated images. 
 
+## Folder Structure
+* Experiments
+    * Contains all the files that we experimented for finishing the assignment
+* logs
+  * Contains text files which has logs and summary for each the model used
+  * loss and accuracy graphs
+* models
+  * contains all model designs
+* utils
+  * contains all utility methods needed for training and validating model
+* model.py
+  * Main file which loads all the required methods sequentially just like colab notebook
+  * model.py has two dictionaries
+    * models -
+      * has key and list as value
+      * value is list which has three values. first value in list is a unique key which is used to get Model instance
+        Second value in the list is a boolean which says is l1 required or not. Third value in the list is a boolean 
+        which says is l2 required or not
+    * Models - returns model instance
+  * For this assignment we are looping through the models dict and selecting each model based on the key from Models dict   
+  * Future Enhancement -  model can be selected by providing options through command line and based on the user input 
+    appropriate model will be selected for training
+
 # Normalization:-
 
 In image processing, normalization is a process that changes the range of pixel intensity values. 
@@ -56,7 +79,7 @@ As the name suggests, Group Normalization normalizes over group of channels for 
 When we put all the channels into a single group, group normalization becomes Layer normalization. And, when we put each channel into different groups it becomes Instance normalization.
 
 For example:-
-
+    
 ## Models and their Performance:-
 Dropout = 0.03
 
@@ -64,12 +87,12 @@ Epoches = 20
 
 |Normalization|L1 Regularization|	L2 Regularization | Params Count | Best Train Accuracy	|Best Test Accuracy| Link to Logs|
 |--|--|--|--|--|--|--|
-|Layer Normalization| - | - |43208 |98.91 |99.62|[Layer Norm Logs]() | 
-|Group Normalization| - | - | 7704| 98.72|99.51 | |
-|Batch Normalization| Yes | - |7704 |97.84 |99.35 | |
-|Layer Normalization| Yes | - |43208 |97.33 |99.06 | |
-|Group Normalization| Yes | - |7704| 98.26|99.34 | |
-|Batch Normalization| Yes | Yes |7704 |97.87 | 99.4| |
+|Layer Normalization| - | - |43208 |98.91 |99.62|[Layer Norm Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/layer_norm/layer_norm)| 
+|Group Normalization| - | - | 7704| 98.72|99.51 |[Group Norm Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/group_norm/group_norm)|
+|Batch Normalization| Yes | - |7704 |97.84 |99.35 |[Batch Norm_L1 Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/batch_norm_l1/batch_norm_l1)|
+|Layer Normalization| Yes | - |43208 |97.33 |99.06 | [Layer Norm_L1 Logs](https://github.com/NSR9/Extensive-Vision-AI/tree/main/Assignment_6/logs/layer_norm_l1)|
+|Group Normalization| Yes | - |7704| 98.26|99.34 |[Group Norm_L1 Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/group_norm_l1/group_norm_l1) |
+|Batch Normalization| Yes | Yes |7704 |97.87 | 99.4|[Batch Norm_L1_L2 Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/batch_norm_l1_l2/batch_norm_l1_l2)|
  
 ## Graphs and Plots (All 6 models mentioned above is compared):-
 |Graph 1: Training Loss for all 3 models together(Late Assignment Part)|Graph 2: Test/Validation Loss for all 3 models together|
