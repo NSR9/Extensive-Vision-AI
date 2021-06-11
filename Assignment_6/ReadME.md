@@ -1,4 +1,4 @@
-# **Session 6 - (Late Assignment but on time)**
+# **Session 6 - (Partial Late Assignment but on time)**
 ## Problem Statement:-
 
 You are making 3 versions of your 5th assignment's best model (or pick one from best assignments):
@@ -66,12 +66,15 @@ Below given is the Mathematical implication of the Batch Normalization.
 
 
 For example:-
+![image](https://user-images.githubusercontent.com/51078583/121732567-0775ad80-cb10-11eb-8e29-39a4c143834b.png)
 
 
 ## Layer Normalization:-
 Layer normalization normalizes input across the features instead of normalizing input features across the batch dimension in batch normalization.
 
 For example:-
+![image](https://user-images.githubusercontent.com/51078583/121732451-e9a84880-cb0f-11eb-984e-27a3d6ffcad1.png)
+
 ## Group Normalization:-
 
 As the name suggests, Group Normalization normalizes over group of channels for each training examples. We can say that, Group Norm is in between Instance Norm and Layer Norm.
@@ -79,6 +82,8 @@ As the name suggests, Group Normalization normalizes over group of channels for 
 When we put all the channels into a single group, group normalization becomes Layer normalization. And, when we put each channel into different groups it becomes Instance normalization.
 
 For example:-
+![image](https://user-images.githubusercontent.com/51078583/121732706-2e33e400-cb10-11eb-99f4-26a9ae3f0d4f.png)
+
     
 ## Models and their Performance:-
 Dropout = 0.03
@@ -90,7 +95,7 @@ Epoches = 20
 |Layer Normalization| - | - |43208 |98.91 |99.62|[Layer Norm Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/layer_norm/layer_norm)| 
 |Group Normalization| - | - | 7704| 98.72|99.51 |[Group Norm Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/group_norm/group_norm)|
 |Batch Normalization| Yes | - |7704 |97.84 |99.35 |[Batch Norm_L1 Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/batch_norm_l1/batch_norm_l1)|
-|Layer Normalization| Yes | - |43208 |97.33 |99.06 | [Layer Norm_L1 Logs](https://github.com/NSR9/Extensive-Vision-AI/tree/main/Assignment_6/logs/layer_norm_l1)|
+|Layer Normalization| Yes | - |43208 |97.33 |99.06 | [Layer Norm_L1 Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/layer_norm_l1/layer_norm_l1)|
 |Group Normalization| Yes | - |7704| 98.26|99.34 |[Group Norm_L1 Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/group_norm_l1/group_norm_l1) |
 |Batch Normalization| Yes | Yes |7704 |97.87 | 99.4|[Batch Norm_L1_L2 Logs](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_6/logs/batch_norm_l1_l2/batch_norm_l1_l2)|
  
