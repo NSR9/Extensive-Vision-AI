@@ -1,4 +1,4 @@
- **Session 6 - (Late Assignement but on time)**
+# **Session 6 - (Late Assignement but on time)**
 ## Problem Statemnt
 
 You are making 3 versions of your 5th assignment's best model (or pick one from best assignments):
@@ -45,14 +45,13 @@ Dropout = 0.03
 |Batch Normalization| Yes | Yes | | |
 
 ## Graphs and Plots (All 6 models mentioned above is compared)
-### Graph 1: Training Loss for all 3 models together(Late Assignment Part)
-![image](https://user-images.githubusercontent.com/51078583/121725761-4bb08000-cb07-11eb-98de-296e91f6a74b.png)
-### Graph 2: Test/Validation Loss for all 3 models together
-![image](https://user-images.githubusercontent.com/51078583/121725803-59fe9c00-cb07-11eb-818f-ca5cb510792d.png)
-### Graph 3: Training Accuracy for all 3 models together(Late Assignment Part)
-![image](https://user-images.githubusercontent.com/51078583/121725858-6b47a880-cb07-11eb-8e3a-241b8395cbfc.png)
-### Graph 4: Test/Validation Accuracy for all 3 models together
-![image](https://user-images.githubusercontent.com/51078583/121725872-726eb680-cb07-11eb-8d88-ac7bf339ff76.png)
+|Graph 1: Training Loss for all 3 models together(Late Assignment Part)|Graph 2: Test/Validation Loss for all 3 models together|
+|--|--|
+|![image](https://user-images.githubusercontent.com/51078583/121725761-4bb08000-cb07-11eb-98de-296e91f6a74b.png)|![image](https://user-images.githubusercontent.com/51078583/121725803-59fe9c00-cb07-11eb-818f-ca5cb510792d.png)|
+
+|Graph 3: Training Accuracy for all 3 models together(Late Assignment Part)|Graph 4: Test/Validation Accuracy for all 3 models together|
+|--|--|
+|![image](https://user-images.githubusercontent.com/51078583/121725858-6b47a880-cb07-11eb-8e3a-241b8395cbfc.png)|![image](https://user-images.githubusercontent.com/51078583/121725872-726eb680-cb07-11eb-8d88-ac7bf339ff76.png)|
 
 ##
 
