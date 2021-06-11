@@ -24,6 +24,7 @@ In image processing, normalization is a process that changes the range of pixel 
 The normalize is quite simple, it looks for the maximum intensity pixel (we will use a grayscale example here) and a minimum intensity and then will determine a factor that scales the min intensity to black and the max intensity to white. This is applied to every pixel in the image which produces the final result. 
 
 The Basic Formulae of implementaion of normalization can be represented in the following experession:-
+
 ![image](https://user-images.githubusercontent.com/51078583/121730596-86b5b200-cb0d-11eb-8d06-898729c46467.png)
 
 
@@ -92,3 +93,10 @@ Epoches = 20
 |Batch Normalization + L1|Batch Normalization + L1 + L2|
 |--|--|
 |![image](https://user-images.githubusercontent.com/51078583/121727909-2bce8b80-cb0a-11eb-9cc7-1a151565f973.png)|![image](https://user-images.githubusercontent.com/51078583/121727948-3db02e80-cb0a-11eb-9bab-6c2d4b1dba49.png)|
+
+## Contributors:-
+
+1. Avinash Ravi
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
