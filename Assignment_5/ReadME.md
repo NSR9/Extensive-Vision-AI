@@ -1,5 +1,13 @@
 ## **Problem Statement:-**
 
+Your new target is:
+* 99.4% (this must be consistently shown in your last few epochs, and not a one-time achievement)
+* Less than or equal to 15 Epochs
+* Less than 10000 Parameters (additional points for doing this in less than 8000 pts)
+* Do this in exactly 3 steps
+* Each File must have "target, result, analysis" TEXT block (either at the start or the end)
+* Keep Receptive field calculations handy for each of your models. 
+
 ## **Step Models:-**
 ### **Target, Result and Analysis of Step models:-**
 
@@ -30,24 +38,27 @@
 
 <img src="https://user-images.githubusercontent.com/51078583/120814031-17b7e680-c56c-11eb-8a87-7bd01dd2c849.png" width=400 height=400>
 
-#### Notebook-1
-[Notebook_1(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/NoteBook_1_Low_params_5.0KParams.ipynb)
-|Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
-|--|--|--|--|--|--|--|--|--|--|--|
-#### Notebook-2
-[Notebook_2(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/NoteBook_2_Dropout&BN_8KParams.ipynb)
-|Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
-|--|--|--|--|--|--|--|--|--|--|--|
-#### Notebook-3
-[Notebook_3(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/Notebook_3_Image_augumentation_8.4Kparams.ipynb)
-|Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
-|--|--|--|--|--|--|--|--|--|--|--|
-#### Notebook-4
+#### Final Notebook
 [Notebook_4(Github_Link)](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_5/Notebook_4(Final)_StepLR_7.5KParam.ipynb)
-|Layer|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
+|Operation|In_Dim|Out_Dim|In_channels|Out_channels|Pad|Stride|Jin|Jout|Rf_in|Rf_out|
 |--|--|--|--|--|--|--|--|--|--|--|
+|Convolution|28x28|28x28|1|8|1|0|1|1|1x1|3x3|
+|Convolution|28x28|28x28|8|8|1|0|1|1|3x3|5x5|
+|Max Pool|28x28|14x14|8|8|0|2|1|2|5x5|6x6|
+|Convolution|14x14|12x12|8|10|0|1|2|2|6x6|10x10|
+|Convolution|12x12|10x10|10|10|0|1|2|2|10x10|14x14|
+|Convolution|10x10|8x8|10|10|0|1|2|2|14x14|18x18|
+|Convolution|8x8|6x6|10|16|0|1|2|2|18x18|22x22|
+|Convolution|6x6|4x4|16|16|0|1|2|2|22x22|26x26|
+|GAP|4x4|1x1|16|16|1|6|2|2|26x26|36x36|
+|Convolution|1x1|1x1|16|10|0|1|2|2|36x36|36x36|
 
 ## **Proposed Network (Best Network - Notebook_4):-**
+
+### **Network Diagram:-**
+
+![Network Diagram](https://user-images.githubusercontent.com/50147394/120842177-a9275880-c56c-11eb-82bd-3bea15401348.png)
+
 
 ### **Network Block:-**
 #### Conv Block 1
@@ -59,12 +70,12 @@
 * 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
 * 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
 * 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
-* 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.1
-* 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.1
+* 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.05
+* 2D Convolution number of kernels 16, followed with Batch Normalization and 2D Dropout of 0.05
 #### Global Average Pooling
 * Global Average pooling with a size 6 and Padding 1 to return a 16 x 1 x 1 as output dimensions
 #### Conv Block 3
-* 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.1
+* 2D Convolution number of kernels 10, followed with Batch Normalization and 2D Dropout of 0.05
 
 ## Model Summary:-
 ![image](https://user-images.githubusercontent.com/51078583/120816521-72ead880-c56e-11eb-9c11-d0b1682fff2d.png)
