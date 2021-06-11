@@ -21,7 +21,7 @@ Find 20 misclassified images for each of the 3 models, and show them as a 5x4 im
 * Experiments
     * Contains all the files that we experimented for finishing the assignment
 * logs
-  * Contains text files which has logs and summary for each the model used
+  * Contains text files which has logs and summary and misclassified images for each the model used
   * loss and accuracy graphs
 * models
   * contains all model designs
@@ -56,23 +56,30 @@ There are mainly three types of Normalization techniques we will be discussing:-
 * Layer Normalization 
 * Group Normalization
 
-![image](https://user-images.githubusercontent.com/51078583/121730799-c7adc680-cb0d-11eb-91bb-5bd2169169a4.png)
-
 ## Batch Normalization:-
 It can be considered as the rescaling of image with respect to the channels. 
 
 Mathematically, BN layer transforms each input in the current mini-batch by subtracting the input mean in the current mini-batch and dividing it by the standard deviation.
 Below given is the Mathematical implication of the Batch Normalization. 
 
+Pictorial representation of Batch Normalization:-
+
+![image](https://user-images.githubusercontent.com/51078583/121733150-bf0abf80-cb10-11eb-8cce-af1dddad1715.png)
 
 For example:-
+
 ![image](https://user-images.githubusercontent.com/51078583/121732567-0775ad80-cb10-11eb-8e29-39a4c143834b.png)
 
 
 ## Layer Normalization:-
 Layer normalization normalizes input across the features instead of normalizing input features across the batch dimension in batch normalization.
 
+Pictorial representation of Layer Normalization:-
+
+![image](https://user-images.githubusercontent.com/51078583/121733303-efeaf480-cb10-11eb-879b-15daa9ebeaa6.png)
+
 For example:-
+
 ![image](https://user-images.githubusercontent.com/51078583/121732451-e9a84880-cb0f-11eb-984e-27a3d6ffcad1.png)
 
 ## Group Normalization:-
@@ -81,7 +88,12 @@ As the name suggests, Group Normalization normalizes over group of channels for 
 
 When we put all the channels into a single group, group normalization becomes Layer normalization. And, when we put each channel into different groups it becomes Instance normalization.
 
+Pictorial representation of Layer Normalization:-
+
+![image](https://user-images.githubusercontent.com/51078583/121733404-11e47700-cb11-11eb-9571-4a09de4c94f4.png)
+
 For example:-
+
 ![image](https://user-images.githubusercontent.com/51078583/121732706-2e33e400-cb10-11eb-99f4-26a9ae3f0d4f.png)
 
     
