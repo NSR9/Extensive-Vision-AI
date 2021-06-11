@@ -1,5 +1,5 @@
-# **Session 6 - (Late Assignement but on time)**
-## Problem Statemnt
+# **Session 6 - (Late Assignment but on time)**
+## Problem Statement
 
 You are making 3 versions of your 5th assignment's best model (or pick one from best assignments):
 1. Network with Group Normalization
@@ -17,7 +17,7 @@ Create these graphs:
 
 Find 20 misclassified images for each of the 3 models, and show them as a 5x4 image matrix in 3 separately annotated images. 
 
-# Normalizartion
+# Normalization
 
 In image processing, normalization is a process that changes the range of pixel intensity values. 
 
@@ -32,7 +32,7 @@ There are mainly three types of Normalization techniques we will be discussing:-
 ## Layer Normalization
 ## Group Normalization
 
-## Models and their Perfromance:
+## Models and their Performance:
 Dropout = 0.03
 
 Epoches = 20
