@@ -35,15 +35,17 @@ There are mainly three types of Normalization techniques we will be discussing:-
 ## Models and their Perfromance:
 Dropout = 0.03
 
-|Normalization|L1 Regularization|	L2 Regularization |  Best Train Accuracy	|Best Test Accuracy| Link to Logs|
-|--|--|--|--|--|--|
-|Layer Normalization| - | | | |
-|Group Normalization| - | | | |
-|Batch Normalization| Yes | | | |
-|Layer Normalization| Yes | | | |
-|Group Normalization| Yes | | | |
-|Batch Normalization| Yes | Yes | | |
+Epoches = 20
 
+|Normalization|L1 Regularization|	L2 Regularization | Params Count | Best Train Accuracy	|Best Test Accuracy| Link to Logs|
+|--|--|--|--|--|--|--|
+|Layer Normalization| - | - |43208 |98.91 |99.62| | 
+|Group Normalization| - | - | 7704| 98.72|99.51 | |
+|Batch Normalization| Yes | - |7704 |97.84 |99.35 | |
+|Layer Normalization| Yes | - |43208 |97.33 |99.06 | |
+|Group Normalization| Yes | - |7704| 98.26|99.34 | |
+|Batch Normalization| Yes | Yes |7704 |97.87 | 99.4| |
+ 
 ## Graphs and Plots (All 6 models mentioned above is compared)
 |Graph 1: Training Loss for all 3 models together(Late Assignment Part)|Graph 2: Test/Validation Loss for all 3 models together|
 |--|--|
@@ -53,5 +55,16 @@ Dropout = 0.03
 |--|--|
 |![image](https://user-images.githubusercontent.com/51078583/121725858-6b47a880-cb07-11eb-8e3a-241b8395cbfc.png)|![image](https://user-images.githubusercontent.com/51078583/121725872-726eb680-cb07-11eb-8d88-ac7bf339ff76.png)|
 
-##
+## Misclassified Images
 
+|Group Normalization|Layer Normalization|
+|--|--|
+|![image](https://user-images.githubusercontent.com/51078583/121727153-27ee3980-cb09-11eb-9172-063f4e97c418.png)|![image](https://user-images.githubusercontent.com/51078583/121726971-e9587f00-cb08-11eb-992a-6da138d4404a.png)|
+
+|Layer Normalization + L1|Group Normalization + L1|
+|--|--|
+|![image](https://user-images.githubusercontent.com/51078583/121727381-76033d00-cb09-11eb-9229-dc66640ba2e1.png)|![image](https://user-images.githubusercontent.com/51078583/121727434-861b1c80-cb09-11eb-9bf8-eb6ffdd70f90.png)|
+
+|Batch Normalization + L1|Batch Normalization + L1 + L2|
+|--|--|
+|![image](https://user-images.githubusercontent.com/51078583/121727909-2bce8b80-cb0a-11eb-9cc7-1a151565f973.png)|![image](https://user-images.githubusercontent.com/51078583/121727948-3db02e80-cb0a-11eb-9bab-6c2d4b1dba49.png)|
