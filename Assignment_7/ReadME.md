@@ -36,6 +36,39 @@ We have used below augmentation techniques using albumentation library
    2. shiftScaleRotate(shift_limit=0.1, scale_limit=0.1, rotate_limit=30, interpolation=cv2.INTER_LINEAR, border_mode=cv2.BORDER_REFLECT_101, always_apply=False, p=0.5)
    3. coarseDropout (max_holes = 1, max_height=16, max_width=16, min_holes = 1, min_height=16, min_width=16, fill_value=(0.4914, 0.4822, 0.4465), mask_fill_value = None)
 
+The data augumentation techniques used are:-
+* HorizontalFlip
+* ShiftScaleRotate
+* CoarseDropout
+* Normalize
+* ToGray
+* ToTensorV2
+
+```
+class Transforms:
+    def __init__(self, transforms: A.Compose):
+        self.transforms = transforms
+
+    def __call__(self, img, *args, **kwargs):
+        return self.transforms(image=np.array(img))
+
+train_transform = A.Compose([
+            A.HorizontalFlip(p=0.3),
+            A.ShiftScaleRotate(shift_limit=0.1, scale_limit=0.1, rotate_limit=30, interpolation=cv2.INTER_LINEAR, border_mode=cv2.BORDER_REFLECT_101, always_apply=False, p=0.5),
+            A.CoarseDropout(max_holes = 1, max_height=16, max_width=16, min_holes = 1, min_height=16, min_width=16, fill_value=(0.4914, 0.4822, 0.4465), mask_fill_value = None),
+            A.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.247, 0.243, 0.261)),
+            A.ToGray(),
+            ToTensorV2(),
+        ])
+
+test_transform = A.Compose([
+    A.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.247, 0.243, 0.261)),
+    ToTensorV2(),
+])
+
+train_transform = Transforms(train_transform)
+test_transform = Transforms(test_transform)
+```
 ## Model:-
 
 ## Training Logs:-
@@ -51,7 +84,10 @@ We have used below augmentation techniques using albumentation library
 | ![image](https://user-images.githubusercontent.com/51078583/121725761-4bb08000-cb07-11eb-98de-296e91f6a74b.png) | ![image](https://user-images.githubusercontent.com/51078583/121725803-59fe9c00-cb07-11eb-818f-ca5cb510792d.png) |
 
 ## Contributors:-
+<<<<<<< HEAD
 
+=======
+>>>>>>> c45bea554b97fc893f91b83d16ebb61ce8ac2066
 1. Avinash Ravi
 2. Nandam Sriranga Chaitanya
 3. Saroj Raj Das
