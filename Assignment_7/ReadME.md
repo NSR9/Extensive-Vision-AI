@@ -1,4 +1,4 @@
-# Assignemnt 7 (Earl)
+# Assignemnt 7 (Partial Late Assignment but on time)
 ## Problem statement:-
 1. change the code such that it uses GPU
     * change the architecture to C1C2C3C40  (No MaxPooling, but 3 3x3 layers with stride of 2 instead) (If you can figure out how to use Dilated kernels here instead of MP or          strided convolution, then 200pts extra!)
@@ -12,7 +12,7 @@
         * coarseDropout (max_holes = 1, max_height=16px, max_width=1, min_holes = 1, min_height=16px, min_width=16px, fill_value=(mean of your dataset), mask_fill_value = None)
             achieve 85% accuracy, as many epochs as you want. Total Params to be less than 200k. 
          * grayscale
-    * achieve 85% accuracy, as many epochs as you want. Total Params to be less than 100k. 
+    * achieve 87% accuracy, as many epochs as you want. Total Params to be less than 100k. 
 
 ## WorkFlow:-
 ### Enchancements used:-
@@ -22,7 +22,8 @@
 * For the Transition block 2 we have used **Dilation Convolution** to decrease the size of image and get a higher receptive field output
 * For the Transition block 3 we have used normal convolutions with stride as 2. 
 * We have used **6 Depth wise Seperable convolutions** . 
-* Use Cross Entropy for 
+* Use Cross Entropy for loss calculation 
+* Data Augumentations using Albumenation Library. 
 
 ## Data Augumentation:-
 
@@ -62,6 +63,71 @@ test_transform = Transforms(test_transform)
 ## Best Model:-
 
 ### Model Summary:-
+      ----------------------------------------------------------------
+              Layer (type)               Output Shape         Param #
+      ================================================================
+                  Conv2d-1           [-1, 32, 32, 32]             864
+                    ReLU-2           [-1, 32, 32, 32]               0
+             BatchNorm2d-3           [-1, 32, 32, 32]              64
+                 Dropout-4           [-1, 32, 32, 32]               0
+                  Conv2d-5           [-1, 64, 32, 32]          18,432
+                    ReLU-6           [-1, 64, 32, 32]               0
+             BatchNorm2d-7           [-1, 64, 32, 32]             128
+                 Dropout-8           [-1, 64, 32, 32]               0
+                  Conv2d-9           [-1, 32, 32, 32]           2,048
+                  
+                 Conv2d-10           [-1, 32, 30, 30]             288
+                 Conv2d-11           [-1, 32, 30, 30]           1,024
+                   ReLU-12           [-1, 32, 30, 30]               0
+            BatchNorm2d-13           [-1, 32, 30, 30]              64
+                Dropout-14           [-1, 32, 30, 30]               0
+                 Conv2d-15           [-1, 32, 28, 28]             288
+                 Conv2d-16           [-1, 32, 28, 28]           1,024
+                   ReLU-17           [-1, 32, 28, 28]               0
+            BatchNorm2d-18           [-1, 32, 28, 28]              64
+                Dropout-19           [-1, 32, 28, 28]               0
+                 Conv2d-20           [-1, 32, 26, 26]             288
+                 Conv2d-21           [-1, 32, 26, 26]           1,024
+                   ReLU-22           [-1, 32, 26, 26]               0
+            BatchNorm2d-23           [-1, 32, 26, 26]              64
+                Dropout-24           [-1, 32, 26, 26]               0
+                 Conv2d-25           [-1, 16, 22, 22]           4,624
+                   ReLU-26           [-1, 16, 22, 22]               0
+                 Conv2d-27           [-1, 16, 20, 20]             144
+                 Conv2d-28           [-1, 32, 20, 20]             512
+                   ReLU-29           [-1, 32, 20, 20]               0
+            BatchNorm2d-30           [-1, 32, 20, 20]              64
+                Dropout-31           [-1, 32, 20, 20]               0
+                 Conv2d-32           [-1, 32, 18, 18]             288
+                 Conv2d-33           [-1, 64, 18, 18]           2,048
+                   ReLU-34           [-1, 64, 18, 18]               0
+            BatchNorm2d-35           [-1, 64, 18, 18]             128
+                Dropout-36           [-1, 64, 18, 18]               0
+                 Conv2d-37           [-1, 64, 16, 16]             576
+                 Conv2d-38           [-1, 64, 16, 16]           4,096
+                   ReLU-39           [-1, 64, 16, 16]               0
+            BatchNorm2d-40           [-1, 64, 16, 16]             128
+                Dropout-41           [-1, 64, 16, 16]               0
+                 Conv2d-42             [-1, 64, 7, 7]          36,928
+                   ReLU-43             [-1, 64, 7, 7]               0
+                 Conv2d-44             [-1, 16, 7, 7]           1,024
+                 Conv2d-45             [-1, 32, 5, 5]           4,608
+                   ReLU-46             [-1, 32, 5, 5]               0
+            BatchNorm2d-47             [-1, 32, 5, 5]              64
+                Dropout-48             [-1, 32, 5, 5]               0
+                 Conv2d-49             [-1, 64, 3, 3]          18,432
+              AvgPool2d-50             [-1, 64, 1, 1]               0
+                 Conv2d-51             [-1, 10, 1, 1]             640
+      ================================================================
+      Total params: 99,968
+      Trainable params: 99,968
+      Non-trainable params: 0
+      ----------------------------------------------------------------
+      Input size (MB): 0.01
+      Forward/backward pass size (MB): 8.11
+      Params size (MB): 0.38
+      Estimated Total Size (MB): 8.50
+      ----------------------------------------------------------------
 
 ### Training Logs:-
         0%|          | 0/391 [00:00<?, ?it/s]Epoch 1:
@@ -515,11 +581,22 @@ test_transform = Transforms(test_transform)
       Test set: Average loss: 0.0031, Accuracy: 43237/50000 (86.47%)
 
 ### Goals Achieved:-
-* Total Params - 
-* Best Training Accuracy - 
-* Best Testing Accuracy - 
+* Epochs - 90 
+* Total Params - **99,968 (Less than 100K)**
+* Best Training Accuracy - **75.02%**
+* Best Testing Accuracy - **86.47% Approximately close to 87%**
 
 ### Accuracy of each class:-
+![image](https://user-images.githubusercontent.com/51078583/122612990-b3377400-d0a1-11eb-87af-ef8065aac510.png)
+
+
+## References:-
+References:
+1. https://albumentations.ai/docs/examples/pytorch_classification/
+2. https://albumentations.ai/docs/api_reference/augmentations/transforms/
+3. https://debuggercafe.com/image-augmentation-using-pytorch-and-albumentations/
+4. https://gitmemory.com/issue/albumentations-team/albumentations/879/824771225
+5. https://www.youtube.com/watch?v=rAdLwKJBvPM&ab_channel=AladdinPersson
 
 ## Contributors:-
 1. Avinash Ravi
