@@ -14,8 +14,20 @@
          * grayscale
     * achieve 87% accuracy, as many epochs as you want. Total Params to be less than 100k. 
 
-## WorkFlow:-
-### Enchancements used:-
+## Folder structure:-
+* Experiments 
+  * Contains all the files that we experimented for finishing the assignment 
+* logs 
+  * Contains text files which has logs and summary for the model used 
+  * loss and accuracy graphs 
+* models 
+  * contains the model design 
+* utils 
+  * contains all utility methods needed for training and validating model 
+* main.py 
+  * Main file which calls the required methods sequentially just like colab notebook
+
+## Enchancements Added:-
 
 * We have not used maxpooling a any time. 
 * For the Transition block 1 only 1x1 conv s used to reduce the number of params.
