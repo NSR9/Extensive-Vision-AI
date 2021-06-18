@@ -600,6 +600,9 @@ test_transform = Transforms(test_transform)
 ### Accuracy of each class:-
 ![image](https://user-images.githubusercontent.com/51078583/122612990-b3377400-d0a1-11eb-87af-ef8065aac510.png)
 
+### Validation Loss Curve:-
+![image](https://user-images.githubusercontent.com/51078583/122613662-dadb0c00-d0a2-11eb-96d2-43d132733913.png)
+
 
 ## References:-
 References:
