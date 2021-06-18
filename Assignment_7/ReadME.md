@@ -1,4 +1,4 @@
-# Assignemnt 7 (Partial Late Assignment but on time)
+# Assignemnt 7 (Late Assignment but on time)
 ## Problem statement:-
 1. change the code such that it uses GPU
     * change the architecture to C1C2C3C40  (No MaxPooling, but 3 3x3 layers with stride of 2 instead) (If you can figure out how to use Dilated kernels here instead of MP or          strided convolution, then 200pts extra!)
