@@ -1,4 +1,4 @@
-# Assignment 8 (Late Submission)
+# Assignment 9 (Late Submission)
 ## Problem statement:-
 
 1. Write a custom ResNet architecture for CIFAR10 that has the following architecture:
