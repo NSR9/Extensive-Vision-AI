@@ -242,8 +242,8 @@ Lr for 24 epoch:
      0.002908973711933752,
      0.002350750422618026,
      0.0017925271333023001]
-  
-![image](https://user-images.githubusercontent.com/51078583/125988862-aa2da185-c706-407f-b818-003d68264c36.png)
+  ![image](https://user-images.githubusercontent.com/51078583/126200689-aa5e37c1-6895-48fc-85d3-2c61095788ac.png)
+
 
 **Max LR is at the 5th epoch**
   
@@ -254,8 +254,7 @@ Lr for 24 epoch:
 
 
 ### Validation loss curve:
-
-![image](https://user-images.githubusercontent.com/51078583/125989174-4b541be9-a107-4893-9f5e-0f2f5db98a1d.png)
+![image](https://user-images.githubusercontent.com/51078583/126200573-8d6d3adf-206b-4046-8749-5261cfc32d38.png)
 
 ### Missclassified Images:
 
