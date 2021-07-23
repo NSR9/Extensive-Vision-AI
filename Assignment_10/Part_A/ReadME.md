@@ -9,6 +9,7 @@
 
 ![image](https://user-images.githubusercontent.com/51078583/126819514-3163317d-cfbd-4e4b-bad7-7f2638347dbf.png)
 
+**Used One cylce LR**
 
 ## Model Summary:
 
