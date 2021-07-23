@@ -2,6 +2,8 @@
 
 ## Data Augumentation:
 
+DataSet: Tiny Imagenet has 200 classes of 64x64 images, each class having 500 images each.
+
 - Random crop after applying padding of (min_height=40, min_width=40, always_apply=True)
 - Horizontal Flip 
 - Coarse Dropout
