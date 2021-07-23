@@ -1,4 +1,4 @@
-# ASsignment A:
+# Assignment A:
 
 ## Model Summary:
 
