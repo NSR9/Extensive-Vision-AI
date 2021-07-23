@@ -225,7 +225,6 @@ accuracy increased, Saving model....
    
 ## Results:
 
-- epoches - 30
 - parameters - 11,271,432
 - Best Train Accuracy - 73.71%
 - Best Test Accuracy - 57.69%
