@@ -231,10 +231,6 @@ accuracy increased, Saving model....
 - Best Test Accuracy - 57.69%
 
 
-### Validation loss curve:
-
-![image](https://user-images.githubusercontent.com/51078583/126816163-47586929-62eb-4047-a250-597ed49b2d6f.png)
-
 ## Contributors:    
 1. Avinash Ravi
 2. Nandam Sriranga Chaitanya
