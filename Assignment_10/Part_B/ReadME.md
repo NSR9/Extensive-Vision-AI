@@ -52,7 +52,7 @@ We graph the relationship between the number of clusters and Within Cluster Sum 
 
 ![image](https://user-images.githubusercontent.com/51078583/126817430-ba0dcd06-f568-4744-8f9e-87c2b0a1c4ca.png)
 
-## K-means Plot on the scatter Plot and Corresponding Anchor Boxes:
+## K-means on the scatter Plot and Corresponding Anchor Boxes:
 
 ### When K = 3 :
 
