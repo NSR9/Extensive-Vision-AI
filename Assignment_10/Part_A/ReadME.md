@@ -1,5 +1,15 @@
 # Assignment A:
 
+## Data Augumentation:
+
+- Random crop after applying padding of (min_height=40, min_width=40, always_apply=True)
+- Horizontal Flip 
+- Coarse Dropout
+- Normalize
+
+![image](https://user-images.githubusercontent.com/51078583/126819514-3163317d-cfbd-4e4b-bad7-7f2638347dbf.png)
+
+
 ## Model Summary:
 
 ![image](https://user-images.githubusercontent.com/51078583/126815847-a91f9a2d-4bd8-4fdc-8ad2-59b55d3d0a8c.png)
@@ -224,3 +234,9 @@ accuracy increased, Saving model....
 ### Validation loss curve:
 
 ![image](https://user-images.githubusercontent.com/51078583/126816163-47586929-62eb-4047-a250-597ed49b2d6f.png)
+
+## Contributors:    
+1. Avinash Ravi
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
