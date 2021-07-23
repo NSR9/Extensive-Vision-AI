@@ -1,0 +1,26 @@
+data_augmentation:
+  type: DefaultTransforms
+is_default_transforms:
+  value: True
+model:
+  type: Resnet
+input_size:
+  value: (3, 64, 64)
+mean:
+  value: (0.4914, 0.4822, 0.4465)
+std:
+  value: (0.247, 0.243, 0.261)
+train_epochs:
+  value: 50
+max_lr:
+  value: 0.015
+lr_finder_epochs:
+  value: 10
+momentum:
+  value: 0.9
+weight_decay:
+  value: 0.05
+optimizer_weight_decay:
+  value: 0.005
+learning_rate:
+  value: 0.01
