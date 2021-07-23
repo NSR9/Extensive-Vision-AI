@@ -33,5 +33,14 @@
 | ![image](https://user-images.githubusercontent.com/51078583/126818030-b28b2969-4cff-44dc-8b6a-db328decad37.png) | ![image](https://user-images.githubusercontent.com/51078583/126818180-638411cd-31cd-4039-96d4-923b634c1b6c.png) |
 
 ### When K = 6 :
+
+| Scatter Plot | Anchor Boxes |
 |--|--|
 | ![image](https://user-images.githubusercontent.com/51078583/126818088-495d611c-8022-4116-903e-d03aeaa4a306.png) | ![image](https://user-images.githubusercontent.com/51078583/126818199-c115bd21-a2b2-4726-befd-2290c703d040.png) |
+
+## Contributors:    
+1. Avinash Ravi
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
+
