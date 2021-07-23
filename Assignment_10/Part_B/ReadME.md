@@ -39,7 +39,7 @@ We graph the relationship between the number of clusters and Within Cluster Sum 
 
 ![image](https://user-images.githubusercontent.com/51078583/126828950-5e1221ba-178f-4182-8bba-fd69842f2d17.png)
 
-
+# Anchor box using K-Means in COCO Dataset Provided:
 ## Normalized data:
 
 ![image](https://user-images.githubusercontent.com/51078583/126817200-7214209d-387a-4345-aed8-9ffed38fb8e7.png)
