@@ -26,6 +26,19 @@ where
   - 3rd element is the bounding box width scaling factor
   - 4th element is the bounding box height scaling factor
 
+## K-Means algorigthm
+
+K-Means Clustering is an unsupervised machine learning algorithm.
+
+Kmeans algorithm is an iterative algorithm that tries to partition the dataset into Kpre-defined distinct non-overlapping subgroups (clusters) where each data point belongs to only one group. It tries to make the intra-cluster data points as similar as possible while also keeping the clusters as different (far) as possible. It assigns data points to a cluster such that the sum of the squared distance between the data points and the cluster’s centroid (arithmetic mean of all the data points that belong to that cluster) is at the minimum. The less variation we have within clusters, the more homogeneous (similar) the data points are within the same cluster.
+
+### Choosing the right number of clusters
+
+Often times the data you’ll be working with will have multiple dimensions making it difficult to visual. As a consequence, the optimum number of clusters is no longer obvious. Fortunately, we have a way of determining this mathematically.
+We graph the relationship between the number of clusters and Within Cluster Sum of Squares (WCSS) then we select the number of clusters where the change in WCSS begins to level off (elbow method).
+
+![image](https://user-images.githubusercontent.com/51078583/126828950-5e1221ba-178f-4182-8bba-fd69842f2d17.png)
+
 
 ## Normalized data:
 
