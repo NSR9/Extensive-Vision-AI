@@ -50,7 +50,7 @@ P.s. - Rohan You Can add this to the dataset for EVA 7 People. :stuck_out_tongue
 [Object Detection Video](https://youtu.be/DwS8OtbGy9I)
 
 ### Social Media Link:
-[LinkedIn Link]
+[LinkedIn Link](https://www.linkedin.com/posts/avinash-ravi-490860aa_computerabrvision-ai-theabrschoolabrofabrai-activity-6824743172837654528-RImn)
 
 ### YoloV3 on Custom data:
 
