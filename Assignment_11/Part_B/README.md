@@ -13,7 +13,7 @@ Training Custom Dataset on Colab for YoloV3
     - Upload on your drive (alternatively you could be doing all of this on your drive to save upload time)
     - Infer on these images using detect.py file. **Modify** detect.py file if your file names do not match the ones mentioned on GitHub. 
 
-            python detect.py --conf-three 0.3 --output output_folder_name
+            python detect.py --conf-thres 0.3 --output output_folder_name
 
     - Use  [ffmpeg](https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence)  to convert the files in your output folder to video
     - Upload the video to YouTube. 
@@ -24,6 +24,12 @@ Training Custom Dataset on Colab for YoloV3
     1. Clone this repo: https://github.com/miki998/YoloV3_Annotation_Tool
     2. Follow the steps in the ReadME of the cloned repo. 
 
+Here is the link for Custo dataset annotated using the Annotation link. 
+
+[Custom Dataset Google Drive link]()
+
+P.s. - Rohan You Can add this to the dataset for EVA 7 People. :stuck_out_tongue_winking_eye:
+
 ## Parameters changed:
 
 1. Use custom dataset of 4000 imaages downloaded from the above link. Added 100 more images by annotaing using the Annotaion tool 
@@ -32,8 +38,8 @@ Training Custom Dataset on Colab for YoloV3
     - vest
     - mask
     - boots
-2. filters=255
-3. classes=80
+2. filters=27
+3. classes=4
 4. burn_in to 100
 5. max_batches to 5000
 6. steps to 4000,4500
@@ -53,8 +59,8 @@ Here are a few of the images annotated using the YoloV3 trained on Custom Datase
 |--|--|--|--|
 | <img src="https://user-images.githubusercontent.com/51078583/126872938-656e8b99-b40a-458b-95cc-94483598c962.png" alt="Girl in a jacket" width="180" height="200">| ![image](https://user-images.githubusercontent.com/51078583/126873027-4b229e5d-9105-46b9-aeea-ad635bcd8ae4.png) | ![image](https://user-images.githubusercontent.com/51078583/126872995-69e9f5c6-27d9-4b5f-86e8-169018d7791b.png) | <img src="https://user-images.githubusercontent.com/51078583/126872954-d2643fd8-6084-42ff-b4da-c818201f3a81.png" alt="Girl in a jacket" width="200" height="200"> |
 | <img src="https://user-images.githubusercontent.com/51078583/126873041-4b9c5ab7-451e-4f86-a673-d55ab7fe0bcc.png" alt="Girl in a jacket" width="200" height="200"> | <img src="https://user-images.githubusercontent.com/51078583/126873081-39fe8a9c-2d5d-46e6-8d18-5a156344b9af.png" alt="Girl in a jacket" width="200" height="200"> | <img src="https://user-images.githubusercontent.com/51078583/126873011-9848c060-9c56-4c30-ad34-f1bdb838dd29.png" alt="Girl in a jacket" width="180" height="200"> | <img src="https://user-images.githubusercontent.com/51078583/126872974-4baf6ad9-ae93-4810-82b5-4eb80ffffe96.png" alt="Girl in a jacket" width="140" height="200"> |
-| ![image](https://user-images.githubusercontent.com/51078583/126873048-ce297476-d9ba-4eac-858b-cec49c3b0cc7.png) |  | ![image](https://user-images.githubusercontent.com/51078583/126873020-e8e86242-1ac7-40d1-8c54-f2d535f2daab.png) |  |
-|  |  | ![image](https://user-images.githubusercontent.com/51078583/126873074-75e4a4eb-8b47-4ca1-9267-f3bf22397f98.png) |  |
+| ![image](https://user-images.githubusercontent.com/51078583/126873048-ce297476-d9ba-4eac-858b-cec49c3b0cc7.png) | ![image](https://user-images.githubusercontent.com/51078583/126874939-114dc414-e57d-4c42-b14c-c9efe612e71e.png) | ![image](https://user-images.githubusercontent.com/51078583/126873020-e8e86242-1ac7-40d1-8c54-f2d535f2daab.png) | ![image](https://user-images.githubusercontent.com/51078583/126874933-018637d6-821f-41e7-9127-4188cf11f728.png) |
+| <img src="https://user-images.githubusercontent.com/51078583/126874906-80726a37-c18a-4469-b8ba-1b10dda6e31a.png" alt="Girl in a jacket" width="200" height="200"> | <img src="https://user-images.githubusercontent.com/51078583/126874945-ccc88768-40dc-4e94-b2af-2b75263f17f4.png" alt="Girl in a jacket" width="220" height="180">  | ![image](https://user-images.githubusercontent.com/51078583/126873074-75e4a4eb-8b47-4ca1-9267-f3bf22397f98.png) | ![image](https://user-images.githubusercontent.com/51078583/126874914-d15057b9-781f-4fde-aeb7-c89b11102c0f.png) |
 
 ## References
 [Yolo V3 Sample](https://colab.research.google.com/drive/1LbKkQf4hbIuiUHunLlvY-cc0d_sNcAgS)
