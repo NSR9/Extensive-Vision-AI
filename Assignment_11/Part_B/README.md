@@ -55,7 +55,15 @@ Here are a few of the images annotated using the YoloV3 trained on Custom Datase
 | <img src="https://user-images.githubusercontent.com/51078583/126873041-4b9c5ab7-451e-4f86-a673-d55ab7fe0bcc.png" alt="Girl in a jacket" width="200" height="200"> | <img src="https://user-images.githubusercontent.com/51078583/126873081-39fe8a9c-2d5d-46e6-8d18-5a156344b9af.png" alt="Girl in a jacket" width="200" height="200"> | <img src="https://user-images.githubusercontent.com/51078583/126873011-9848c060-9c56-4c30-ad34-f1bdb838dd29.png" alt="Girl in a jacket" width="180" height="200"> | <img src="https://user-images.githubusercontent.com/51078583/126872974-4baf6ad9-ae93-4810-82b5-4eb80ffffe96.png" alt="Girl in a jacket" width="140" height="200"> |
 | ![image](https://user-images.githubusercontent.com/51078583/126873048-ce297476-d9ba-4eac-858b-cec49c3b0cc7.png) |  | ![image](https://user-images.githubusercontent.com/51078583/126873020-e8e86242-1ac7-40d1-8c54-f2d535f2daab.png) |  |
 |  |  | ![image](https://user-images.githubusercontent.com/51078583/126873074-75e4a4eb-8b47-4ca1-9267-f3bf22397f98.png) |  |
+
 ## References
 [Yolo V3 Sample](https://colab.research.google.com/drive/1LbKkQf4hbIuiUHunLlvY-cc0d_sNcAgS)
 [SchoolOfAI YoloV3 Repo](https://github.com/theschoolofai/YoloV3)
 [FFMPEG](https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence)
+
+## Contirbutors:
+
+1. Avinash Ravi
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
