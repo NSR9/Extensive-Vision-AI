@@ -9,7 +9,7 @@
 
 ## Yolo on Custom Image:
 
-###Input Image:
+### Input Custom Image:
 
 ![image](https://user-images.githubusercontent.com/51078583/126872041-4659395c-d5fe-480f-868e-e5db656f6988.png)
 
