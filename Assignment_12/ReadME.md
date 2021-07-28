@@ -1,5 +1,15 @@
 # Assignment 12 - The Dawn of the Transformers:
 
+## Problem Statement:
+
+1. Implement that [Spatial Transformer Code](https://brsoff.github.io/tutorials/intermediate/spatial_transformer_tutorial.html) for CIFAR10 and submit. Must have proper readme and must be trained for 50 Epochs.
+2. describe using text and your drawn images, the classes in this [FILE](https://github.com/jeonsworld/ViT-pytorch/blob/main/models/modeling.py) (Links to an external site.):
+ - Block
+ - Embeddings
+ - MLP
+ - Attention
+ - Encoder
+ - 
 ## Spatial Transformers(STN's):
 
 Spatial Transformer Network (STN), by Google DeepMind helps to crop out and scale-normalizes the appropriate region, which can simplify the subsequent classification task and lead to better classification performance
@@ -38,6 +48,11 @@ This is the last part of the spatial transformer network. We have the input feat
 
 ![image](https://user-images.githubusercontent.com/51078583/127388329-bcc89a75-6558-439d-bd25-52ad90d72415.png)
 
+## Model Architecture:
+
+## Training Logs For Cifar10:
+
+## Results:
 
 ## Vision Transformers(ViT's):
 
