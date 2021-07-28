@@ -48,11 +48,13 @@ This is the last part of the spatial transformer network. We have the input feat
 
 ![image](https://user-images.githubusercontent.com/51078583/127388329-bcc89a75-6558-439d-bd25-52ad90d72415.png)
 
-## Model Architecture:
+## CIFAR10 with STN:
+Implement that [Spatial Transformer Code](https://brsoff.github.io/tutorials/intermediate/spatial_transformer_tutorial.html) for CIFAR10 and submit. Must have proper readme and must be trained for 50 Epochs.
+### Model Architecture:
 
-## Training Logs For Cifar10:
+### Training Logs For Cifar10:
 
-## Results:
+### Results:
 
 ## Vision Transformers(ViT's):
 
