@@ -9,7 +9,7 @@
  - MLP
  - Attention
  - Encoder
- - 
+ 
 ## Spatial Transformers(STN's):
 
 Spatial Transformer Network (STN), by Google DeepMind helps to crop out and scale-normalizes the appropriate region, which can simplify the subsequent classification task and lead to better classification performance
