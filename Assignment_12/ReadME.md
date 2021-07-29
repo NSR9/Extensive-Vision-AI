@@ -68,6 +68,66 @@ Implement that [Spatial Transformer Code](https://brsoff.github.io/tutorials/int
 
 ### Embeddings
 
+- Embedding being the first part of the  Vision Transformers structure includes basic division of the images into patches before it can be used for encoding.
+
+![image](https://user-images.githubusercontent.com/51078583/127558337-030dc621-4e8c-4211-a61c-cad064a91a19.png)
+
+In the below code something similar is happening . 
+
+- To study the image ViT divides an image into a grid of square patches. Each patch is flattened into a single vector by concatenating the channels of all pixels in a patch and then linearly projecting it to the desired input dimension. 
+- These patches are represented in a linear layer. Conv2D layer in the _init_ funtion performs the reprentation of the patches with the followinf details *(in_channels=in_channels, out_channels=config.hidden_size, kernel_size=patch_size,=patch_size)* . The Above code is majorly concerned with the creation of patches based on the grids. 
+- To have the model know which patch comes after what there is a positional embedding for these patches, *nn.Parameter(torch.zeros(1, n_patches+1, config.hidden_size))*. To make this job easier and more perfect we let the neural network decide numbering/positioning refernce for the patches for the image taken in so that the neural netowkr comes up with the most optimum and correct representation . 
+- The forward part of the function is basically for moving thru the initiailzation of the class for the input values. 
+
+```
+class Embeddings(nn.Module):
+    """Construct the embeddings from patch, position embeddings.
+    """
+    def __init__(self, config, img_size, in_channels=3):
+        super(Embeddings, self).__init__()
+        self.hybrid = None
+        img_size = _pair(img_size)
+
+        if config.patches.get("grid") is not None:
+            grid_size = config.patches["grid"]
+            patch_size = (img_size[0] // 16 // grid_size[0], img_size[1] // 16 // grid_size[1])
+            n_patches = (img_size[0] // 16) * (img_size[1] // 16)
+            self.hybrid = True
+        else:
+            patch_size = _pair(config.patches["size"])
+            n_patches = (img_size[0] // patch_size[0]) * (img_size[1] // patch_size[1])
+            self.hybrid = False
+
+        if self.hybrid:
+            self.hybrid_model = ResNetV2(block_units=config.resnet.num_layers,
+                                         width_factor=config.resnet.width_factor)
+            in_channels = self.hybrid_model.width * 16
+        self.patch_embeddings = Conv2d(in_channels=in_channels,
+                                       out_channels=config.hidden_size,
+                                       kernel_size=patch_size,
+                                       stride=patch_size)
+        self.position_embeddings = nn.Parameter(torch.zeros(1, n_patches+1, config.hidden_size))
+        self.cls_token = nn.Parameter(torch.zeros(1, 1, config.hidden_size))
+
+        self.dropout = Dropout(config.transformer["dropout_rate"])
+        
+    def forward(self, x):
+        B = x.shape[0]
+        cls_tokens = self.cls_token.expand(B, -1, -1)
+
+        if self.hybrid:
+            x = self.hybrid_model(x)
+        x = self.patch_embeddings(x)
+        x = x.flatten(2)
+        x = x.transpose(-1, -2)
+        x = torch.cat((cls_tokens, x), dim=1)
+
+        embeddings = x + self.position_embeddings
+        embeddings = self.dropout(embeddings)
+        return embeddings
+
+```
+
 ### MLP
 
 ### Attention
