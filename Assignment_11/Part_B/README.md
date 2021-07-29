@@ -26,7 +26,7 @@ Training Custom Dataset on Colab for YoloV3
 
 Here is the link for Custo dataset annotated using the Annotation link. 
 
-[Custom Dataset Google Drive link]()
+[Custom Dataset Google Drive link](https://drive.google.com/drive/folders/1R5CKXJhkhx_SaQJoMNh6_SiK_XZY-NpP?usp=sharing)
 
 P.s. - Rohan You Can add this to the dataset for EVA 7 People. :stuck_out_tongue_winking_eye:
 
