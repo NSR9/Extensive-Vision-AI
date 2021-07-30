@@ -15,10 +15,14 @@ A picture is worth a thousand words? It is not possible to fully describe a pict
 
 The Most common two methods used  are:
 - Spatial Transformers(STN's):
- - [Link to ReadME](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_12/Spatial%20Transformation/ReadME.md)
- - [Link to Colab Notebook]()
- - [Link to Gthub ipynb Notebook]()
+  - [Link to ReadME](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_12/Spatial%20Transformation/ReadME.md)
+  - [Link to Colab Notebook]()
+  - [Link to Gthub ipynb Notebook](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_12/Spatial%20Transformation/Assignment12_Spatial_Transformer.ipynb)
 - Vision Transformers(ViT's):
- - [Link to ReadME](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_12/Vision%20Transformers/ReadME.md)
+  - [Link to ReadME](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_12/Vision%20Transformers/ReadME.md)
 
 ## Contributors:
+1. Avinash Ravi
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
