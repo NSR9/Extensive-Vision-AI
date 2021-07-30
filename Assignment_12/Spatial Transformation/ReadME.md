@@ -51,3 +51,10 @@ Implement that [Spatial Transformer Code](https://brsoff.github.io/tutorials/int
 ## Refernce Link:
 
 - [Spatial Transformers](https://towardsdatascience.com/review-stn-spatial-transformer-network-image-classification-d3cbd98a70aa)
+
+## Contributors:
+1. Avinash Ravi
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
+
