@@ -2,7 +2,7 @@
 The field of Computer Vision has for years been dominated by Convolutional Neural Networks (CNNs).
 But recently this field has been incredibly revolutionized by the architecture of Vision Transformers (ViT), which through the mechanism of self-attention has proven to obtain excellent results on many tasks.
 
-
+![image](https://user-images.githubusercontent.com/51078583/127675398-b650da37-bdfe-473c-b4d0-ffa4ba00a484.png)
 
 
 ## Code Block Explanation:
