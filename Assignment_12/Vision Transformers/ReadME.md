@@ -101,7 +101,7 @@ class Embeddings(nn.Module):
 
 ```
 
-### MLP:
+### Multi-Layer Perceptron (MLP):
 
 MLP-Mixer consists of per-patch linear embeddings, Mixer layers, and a classifier head. Mixer layers contain one token-mixing MLP and one channel-mixing MLP, each consisting of two fully-connected layers and a GELU(Gaussian Error Linear Unit) nonlinearity. 
 
