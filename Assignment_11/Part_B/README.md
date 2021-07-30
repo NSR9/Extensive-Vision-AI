@@ -63,9 +63,9 @@ Here are a few of the images annotated using the YoloV3 trained on Custom Datase
 | <img src="https://user-images.githubusercontent.com/51078583/126874906-80726a37-c18a-4469-b8ba-1b10dda6e31a.png" alt="Girl in a jacket" width="200" height="200"> | <img src="https://user-images.githubusercontent.com/51078583/126874945-ccc88768-40dc-4e94-b2af-2b75263f17f4.png" alt="Girl in a jacket" width="220" height="180">  | ![image](https://user-images.githubusercontent.com/51078583/126873074-75e4a4eb-8b47-4ca1-9267-f3bf22397f98.png) | ![image](https://user-images.githubusercontent.com/51078583/126874914-d15057b9-781f-4fde-aeb7-c89b11102c0f.png) |
 
 ## References
-[Yolo V3 Sample](https://colab.research.google.com/drive/1LbKkQf4hbIuiUHunLlvY-cc0d_sNcAgS)
-[SchoolOfAI YoloV3 Repo](https://github.com/theschoolofai/YoloV3)
-[FFMPEG](https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence)
+- [Yolo V3 Sample](https://colab.research.google.com/drive/1LbKkQf4hbIuiUHunLlvY-cc0d_sNcAgS)
+- [SchoolOfAI YoloV3 Repo](https://github.com/theschoolofai/YoloV3)
+- [FFMPEG](https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/image_sequence)
 
 ## Contirbutors:
 
