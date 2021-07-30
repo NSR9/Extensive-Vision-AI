@@ -1,13 +1,13 @@
-## Vision Transformers(ViT's):
+# Vision Transformers(ViT's):
 The field of Computer Vision has for years been dominated by Convolutional Neural Networks (CNNs).
 But recently this field has been incredibly revolutionized by the architecture of Vision Transformers (ViT), which through the mechanism of self-attention has proven to obtain excellent results on many tasks.
 
 ![image](https://user-images.githubusercontent.com/51078583/127675398-b650da37-bdfe-473c-b4d0-ffa4ba00a484.png)
 
 
-## Code Block Explanation:
+# Code Block Explanation:
 
-### Block:
+## Block:
 
 The block is bacically that part of the code which combines both the results of attention and MLP forming a skip kind of connection. 
 
@@ -39,7 +39,7 @@ According to the code:
             x = x + h
             return x, weights
 ```
-### Embeddings:
+## Embeddings:
 
 Embedding being the first part of the  Vision Transformers structure includes basic division of the images into patches before it can be used for encoding. As discussed earlier, an image is divided into small patches here let’s say 9, and each patch might contain 16×16 pixels.  The input sequence consists of a flattened vector ( 2D to 1D ) of pixel values from a patch of size 16×16. Each flattened element is fed into a linear projection layer that will produce what they call the “Patch embedding”. Position embeddings are added to the patch embeddings to retain positional information.
 
@@ -101,7 +101,7 @@ class Embeddings(nn.Module):
 
 ```
 
-### Multi-Layer Perceptron (MLP):
+## Multi-Layer Perceptron (MLP):
 
 MLP-Mixer consists of per-patch linear embeddings, Mixer layers, and a classifier head. Mixer layers contain one token-mixing MLP and one channel-mixing MLP, each consisting of two fully-connected layers and a GELU(Gaussian Error Linear Unit) nonlinearity. 
 
@@ -112,7 +112,7 @@ The Output from the Attention block is passed onto the MLP block which can be re
 
 All image patches are projected linearly with the same projection matrix provides a better interaction amongst the image to learn . 
 
-#### GeLU(Gaussian Error Linear Unit) :
+### GeLU(Gaussian Error Linear Unit) :
 
 
 GeLU performs element-wise activation function on a given input tensor. An activation function used in the most recent Transformers – Google's BERT and OpenAI's GPT-2. The paper is from 2016, but is only catching attention up until recently.
@@ -149,7 +149,7 @@ So it's just a combination of some functions (e.g. hyperbolic tangent tanh) and 
             return x
  ```
 
-### Attention
+## Attention
 
 The Attention mechanism enables the transformers to have extremely long term memory. A transformer model can “attend” or “focus” on all previous tokens that have been generated.The attention takes three inputs, the famous queries, keys, and values, and computes the attention matrix using queries and values and use it to “attend” to the values.
 
@@ -218,7 +218,7 @@ class Attention(nn.Module):
         return attention_output, weights
 
 ```
-### Encoder
+## Encoder
 
 Transformers consists of Encoder - Decoder Block. But apparently in ViT's we have only the Encoder block. 
 
@@ -250,13 +250,13 @@ In the code below the input is and is passed to the multi-layer and attention fo
 
 ```
 
-## Refernce Link:
+# Refernce Link:
 
 - [Vision Transformers](https://youtu.be/4Bdc55j80l8)
 - [MLP](https://medium.com/@nabil.madali/an-all-mlp-architecture-for-vision-7e7e1270fd33)
 - [Transformers](https://towardsdatascience.com/illustrated-guide-to-transformers-step-by-step-explanation-f74876522bc0)
 
-## Contributors:
+# Contributors:
 1. Avinash Ravi
 2. Nandam Sriranga Chaitanya
 3. Saroj Raj Das
