@@ -1,4 +1,9 @@
 ## Vision Transformers(ViT's):
+The field of Computer Vision has for years been dominated by Convolutional Neural Networks (CNNs).
+But recently this field has been incredibly revolutionized by the architecture of Vision Transformers (ViT), which through the mechanism of self-attention has proven to obtain excellent results on many tasks.
+
+
+
 
 ## Code Block Explanation:
 
@@ -36,7 +41,7 @@ According to the code:
 ```
 ### Embeddings:
 
-- Embedding being the first part of the  Vision Transformers structure includes basic division of the images into patches before it can be used for encoding.
+Embedding being the first part of the  Vision Transformers structure includes basic division of the images into patches before it can be used for encoding. As discussed earlier, an image is divided into small patches here let’s say 9, and each patch might contain 16×16 pixels.  The input sequence consists of a flattened vector ( 2D to 1D ) of pixel values from a patch of size 16×16. Each flattened element is fed into a linear projection layer that will produce what they call the “Patch embedding”. Position embeddings are added to the patch embeddings to retain positional information.
 
 ![image](https://user-images.githubusercontent.com/51078583/127558337-030dc621-4e8c-4211-a61c-cad064a91a19.png)
 
@@ -215,10 +220,41 @@ class Attention(nn.Module):
 ```
 ### Encoder
 
+Transformers consists of Encoder - Decoder Block. But apparently in ViT's we have only the Encoder block. 
+
+The Sole purpose of this as seen in the code is to take multiple attention in a Multi-head attention framework and Multi-Layer Perceptron (MLP) framework and combine them in a sequential Manner. 
+
+![image](https://user-images.githubusercontent.com/51078583/127673545-49a4cd8f-c381-4b08-87c3-f52bc201a820.png)
+
+In the code below the input is and is passed to the multi-layer and attention for the same is calculated for each layer. It is then combined and normalized and send as an output. 
+
+```
+    class Encoder(nn.Module):
+        def __init__(self, config, vis):
+            super(Encoder, self).__init__()
+            self.vis = vis
+            self.layer = nn.ModuleList()
+            self.encoder_norm = LayerNorm(config.hidden_size, eps=1e-6)
+            for _ in range(config.transformer["num_layers"]):
+                layer = Block(config, vis)
+                self.layer.append(copy.deepcopy(layer))
+
+        def forward(self, hidden_states):
+            attn_weights = []
+            for layer_block in self.layer:
+                hidden_states, weights = layer_block(hidden_states)
+                if self.vis:
+                    attn_weights.append(weights)
+            encoded = self.encoder_norm(hidden_states)
+            return encoded, attn_weights
+
+```
+
 ## Refernce Link:
 
 - [Vision Transformers](https://youtu.be/4Bdc55j80l8)
 - [MLP](https://medium.com/@nabil.madali/an-all-mlp-architecture-for-vision-7e7e1270fd33)
+- [Transformers](https://towardsdatascience.com/illustrated-guide-to-transformers-step-by-step-explanation-f74876522bc0)
 
 ## Contributors:
 1. Avinash Ravi
