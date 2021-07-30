@@ -10,7 +10,7 @@ According to the code:
 - The input send is passed on to Layer Normalization of *(onfig.hidden_size, eps=1e-6)* which is in turn passed to the attention layer. The output from the attention layer and the impage before the Layer Normaliztion is clubbed together or added and passed in for the input or next step. 
 - As a part of the next step the output coming in after the attention and the skip connection is again passed to the Layer Normalization of *(config.hidden_size, eps=1e-6)*. The output of Layer Normalization is then passed to the Feed Forword network which in this case is the MLP. The output of MLP and the input data before the Layer Normalization of MLP is again clubbed and as a result send as the final output. 
 
-![image](https://user-images.githubusercontent.com/51078583/127564671-a62ca0e0-4b3d-4741-9d3a-e009fc0f9d8d.png)
+![image](https://user-images.githubusercontent.com/51078583/127666429-501e735a-7169-4b97-9659-0b3363c178d5.png)
 
 ```
     class Block(nn.Module):
@@ -102,7 +102,7 @@ MLP-Mixer consists of per-patch linear embeddings, Mixer layers, and a classifie
 
 The Output from the Attention block is passed onto the MLP block which can be represented by the following diagram :
 
-![image](https://user-images.githubusercontent.com/51078583/127562674-a71fd4d0-f5aa-4d41-9764-211cc538122f.png)
+![image](https://user-images.githubusercontent.com/51078583/127666511-c771e3a0-fef7-4501-b401-7c2ef0c8914b.png)
 
 
 All image patches are projected linearly with the same projection matrix provides a better interaction amongst the image to learn . 
@@ -146,12 +146,83 @@ So it's just a combination of some functions (e.g. hyperbolic tangent tanh) and 
 
 ### Attention
 
+The Attention mechanism enables the transformers to have extremely long term memory. A transformer model can “attend” or “focus” on all previous tokens that have been generated.The attention takes three inputs, the famous queries, keys, and values, and computes the attention matrix using queries and values and use it to “attend” to the values.
+
+- To achieve self-attention, we feed the input into 3 distinct fully connected layers to create the query, key, and value vectors.
+- After feeding the query, key, and value vector through a linear layer, the queries and keys undergo a dot product matrix multiplication to produce a score matrix.
+
+![image](https://user-images.githubusercontent.com/51078583/127671621-38a3dbe3-d4b5-45d8-bc84-b49d8ec68b7c.png)
+
+- The score matrix determines how much focus should patch have. So each patch will have a score that corresponds to other patches in the time-step. The higher the score the more focus. This is how the queries are mapped to the keys.
+- Then, the scores get scaled down by getting divided by the square root of the dimension of query and key. This is to allow for more stable gradients, as multiplying values can have exploding effects.
+<img src="https://user-images.githubusercontent.com/51078583/127671069-2a9e54d4-6adf-4713-8023-326a732fe8eb.png" alt="Girl in a jacket" width="250" height="250">
+- Next, you take the softmax of the scaled score to get the attention weights, which gives you probability values between 0 and 1. By doing a softmax the higher scores get heighten, and lower scores are depressed. This allows the model to be more confident about which patches to attend too.
+- Then you take the attention weights and multiply it by your value vector to get an output vector. The higher softmax scores will keep the value of those patches the model learns is more important. The lower scores will drown out the irrelevant patches.
+
+![image](https://user-images.githubusercontent.com/51078583/127670857-1c20c5d8-ca4a-4b6d-b0a5-2b6fb058e467.png)
+
+Here is the overall representation of the attention block of the code(block diagram):
+
+![image](https://user-images.githubusercontent.com/51078583/127671389-2eff966e-f3e9-4daf-8bbb-e9fb8f6b6803.png)
+
+```
+class Attention(nn.Module):
+    def __init__(self, config, vis):
+        super(Attention, self).__init__()
+        self.vis = vis
+        self.num_attention_heads = config.transformer["num_heads"]
+        self.attention_head_size = int(config.hidden_size / self.num_attention_heads)
+        self.all_head_size = self.num_attention_heads * self.attention_head_size
+
+        self.query = Linear(config.hidden_size, self.all_head_size)
+        self.key = Linear(config.hidden_size, self.all_head_size)
+        self.value = Linear(config.hidden_size, self.all_head_size)
+
+        self.out = Linear(config.hidden_size, config.hidden_size)
+        self.attn_dropout = Dropout(config.transformer["attention_dropout_rate"])
+        self.proj_dropout = Dropout(config.transformer["attention_dropout_rate"])
+
+        self.softmax = Softmax(dim=-1)
+
+    def transpose_for_scores(self, x):
+        new_x_shape = x.size()[:-1] + (self.num_attention_heads, self.attention_head_size)
+        x = x.view(*new_x_shape)
+        return x.permute(0, 2, 1, 3)
+
+    def forward(self, hidden_states):
+        mixed_query_layer = self.query(hidden_states)
+        mixed_key_layer = self.key(hidden_states)
+        mixed_value_layer = self.value(hidden_states)
+
+        query_layer = self.transpose_for_scores(mixed_query_layer)
+        key_layer = self.transpose_for_scores(mixed_key_layer)
+        value_layer = self.transpose_for_scores(mixed_value_layer)
+
+        attention_scores = torch.matmul(query_layer, key_layer.transpose(-1, -2))
+        attention_scores = attention_scores / math.sqrt(self.attention_head_size)
+        attention_probs = self.softmax(attention_scores)
+        weights = attention_probs if self.vis else None
+        attention_probs = self.attn_dropout(attention_probs)
+
+        context_layer = torch.matmul(attention_probs, value_layer)
+        context_layer = context_layer.permute(0, 2, 1, 3).contiguous()
+        new_context_layer_shape = context_layer.size()[:-2] + (self.all_head_size,)
+        context_layer = context_layer.view(*new_context_layer_shape)
+        attention_output = self.out(context_layer)
+        attention_output = self.proj_dropout(attention_output)
+        return attention_output, weights
+
+```
 ### Encoder
 
 ## Refernce Link:
 
-- [Spatial Transformers](https://towardsdatascience.com/review-stn-spatial-transformer-network-image-classification-d3cbd98a70aa)
 - [Vision Transformers](https://youtu.be/4Bdc55j80l8)
 - [MLP](https://medium.com/@nabil.madali/an-all-mlp-architecture-for-vision-7e7e1270fd33)
 
 ## Contributors:
+1. Avinash Ravi
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
+
