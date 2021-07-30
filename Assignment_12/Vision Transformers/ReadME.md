@@ -7,6 +7,13 @@ But recently this field has been incredibly revolutionized by the architecture o
 
 # Code Block Explanation:
 
+Describe using text and your drawn images, the classes in this [FILE](https://github.com/jeonsworld/ViT-pytorch/blob/main/models/modeling.py) (Links to an external site.):
+- Block
+- Embeddings
+- MLP
+- Attention
+- Encoder
+
 ## Block:
 
 The block is bacically that part of the code which combines both the results of attention and MLP forming a skip kind of connection. 
