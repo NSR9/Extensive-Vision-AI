@@ -80,6 +80,55 @@ Each element i of the ground truth set can be seen as a yi= (ci,bi) where ci is 
 Looking into the assignment and fine tuning DETR for creatign bounding boxes around balloons , using pretrained weights . 
 
 
+## Training details:
+
+We have added custom class Balloon and fine tuned the model for **150 epochs **. 
+
+Here is the link to the :
+
+- [GITHUB](https://github.com/NSR9/Extensive-Vision-AI/blob/main/Assignment_14/Assignment_14_notebook.ipynb)
+- [COLAB NOTEBOOK](https://colab.research.google.com/github/NSR9/Extensive-Vision-AI/blob/main/Assignment_14/Assignment_14_notebook.ipynb)
+
+## Metrics:
+
+
+**Average Precision and loss**
+
+![image](https://user-images.githubusercontent.com/51078583/129378216-95a44310-7359-4ac6-abac-b9d6f7a4081b.png)
+
+**Loss curves related to bbox**
+
+![image](https://user-images.githubusercontent.com/51078583/129378787-b8238be3-bd37-4dd3-9998-c4bfbd62d949.png)
+
+
+**Class Error**
+
+![image](https://user-images.githubusercontent.com/51078583/129379078-2aa519e3-4432-472a-9104-10fcb3099fa1.png)
+
+
+## Training image Bounding Box:
+
+![image](https://user-images.githubusercontent.com/51078583/129379686-bcfa3faa-7b6e-4506-be51-3bfdf6769eba.png)![image](https://user-images.githubusercontent.com/51078583/129379782-0f85041c-a0db-4675-8640-51ef80c6d1fb.png)
+
+## Validation image Bounding Box:
+
+![image](https://user-images.githubusercontent.com/51078583/129380573-06bd86e3-2de7-4631-a861-66e90e95ae08.png)![image](https://user-images.githubusercontent.com/51078583/129380591-47d40fb2-3eb2-4d29-8a18-e11a7ebc544e.png)
+
+# Refernces:
+
+https://medium.com/visionwizard/detr-b677c7016a47
+https://colab.research.google.com/github/woctezuma/finetune-detr/blob/master/finetune_detr.ipynb
+
+# Contributors:
+1. Avinash Ravi
+2. Nandam Sriranga Chaitanya
+3. Saroj Raj Das
+4. Ujjwal Gupta
+
+
+
+
+
 
 
 
