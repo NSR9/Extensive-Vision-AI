@@ -6,25 +6,40 @@ Share the link to the notebook where I can find your Cats vs Dogs Training
 Expecting a Separate or same README to explain your understanding of all the Classes that we covered in the class. 
 
 
-# What is DETR:
+## ViT Classes As Explained:
 
-The main ingredients of DEtection TRansformer or DETR, are a set-based global loss that forces unique predictions via bipartite matching, and a transformer encoder-decoder architecture. Given a fixed small set of learned object queries, DETR reasons about the relations of the objects and the global image context to directly output the final set of predictions in parallel.
+1. class PatchEmbeddings
 
-## What’s Good
-Compares to previous state-of-the-art models in object detection, DETR has significantly less hyperparameter to set. DETR doesn’t need to set the number of anchor box, aspect ratio, default cordinates of bounding boxes, even threshold for non-maximum surpression. DETR hand all those task to encoder-decoder transformer and bipartite matching, and achieve more general models for diversified usage.
+class PatchEmbeddings(nn.Module):
+    """
+    Image to Patch Embedding.
 
-## Data Augumentation:
+    """
 
-DataSet: Tiny Imagenet has 200 classes of 64x64 images, each class having 500 images each.
+    def __init__(self, image_size=224, patch_size=16, num_channels=3, embed_dim=768):
+        super().__init__()
+        image_size = to_2tuple(image_size)
+        patch_size = to_2tuple(patch_size)
+        num_patches = (image_size[1] // patch_size[1]) * (image_size[0] // patch_size[0])
+        self.image_size = image_size
+        self.patch_size = patch_size
+        self.num_patches = num_patches
 
-- Random crop after applying padding of (min_height=40, min_width=40, always_apply=True)
-- Horizontal Flip 
-- Coarse Dropout
-- Normalize
+        self.projection = nn.Conv2d(num_channels, embed_dim, kernel_size=patch_size, stride=patch_size)
 
-![image](https://user-images.githubusercontent.com/51078583/126819514-3163317d-cfbd-4e4b-bad7-7f2638347dbf.png)
+    def forward(self, pixel_values):
+        batch_size, num_channels, height, width = pixel_values.shape
+        # FIXME look at relaxing size constraints
+        if height != self.image_size[0] or width != self.image_size[1]:
+            raise ValueError(
+                f"Input image size ({height}*{width}) doesn't match model ({self.image_size[0]}*{self.image_size[1]})."
+            )
+        x = self.projection(pixel_values).flatten(2).transpose(1, 2)
+        return x
 
-**Used One cylce LR**
+This class takes the input image and converts into patch embeddings and then convert them to 1D arrary for further processing.
+
+
 
 ## Model Summary:
 
