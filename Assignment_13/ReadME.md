@@ -8,7 +8,7 @@ Expecting a Separate or same README to explain your understanding of all the Cla
 
 ## ViT Classes As Explained:
 
-1. class PatchEmbeddings:
+### 1. class PatchEmbeddings:
 
 class PatchEmbeddings(nn.Module):
     """
@@ -40,7 +40,7 @@ class PatchEmbeddings(nn.Module):
 ### Explanation:
 This class takes the input image and converts into patch embeddings and then convert them to 1D arrary for further processing.
 
-2. class ViTEmbeddings:
+### 2. class ViTEmbeddings:
 
 class ViTEmbeddings(nn.Module):
     """
@@ -75,7 +75,7 @@ class ViTEmbeddings(nn.Module):
 ### Explanation:
 This class creates classification token for the input class, patch embeddings out of the imput image and postion embeddings for the corresponding patches.
 
-3. class ViTConfig:
+### 3. class ViTConfig:
 
 class ViTConfig():
   def __init__(
@@ -114,7 +114,7 @@ class ViTConfig():
 In this class we define the configuration with the parameters hidden size, hidden layers, attention heads, intermediate size, activation function, hidden dropout probablity, attention dropout probablity, initializer range, layer norm eps, encoder decoder flag, image size, patch size, number of channels, and kwargs params.
 These values are assigned to internal parameters upon initialization.
 
-4. ViTSelfAttention class
+### 4. ViTSelfAttention class
 
 import math
 class ViTSelfAttention(nn.Module):
@@ -177,7 +177,7 @@ class ViTSelfAttention(nn.Module):
 ### Explanation:
 This class defines the self attention layer of ViT, we have defined various internal layers like key, query and value.
 
-5. class ViTSelfOutput(nn.Module):
+### 5. class ViTSelfOutput(nn.Module):
   """
   This is just a Linear Layer Block
   """
@@ -195,7 +195,7 @@ This class defines the self attention layer of ViT, we have defined various inte
 ### Explanation:
 This is a linear layer block to process the Self attention output.
 
- 6. class ViTAttention(nn.Module):
+### 6. class ViTAttention(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.attention = ViTSelfAttention(config)
@@ -231,7 +231,7 @@ This is a linear layer block to process the Self attention output.
 ### Explanation:
 This class is ViT attention layer, where we get selfattention and selfoutput fully connected layer as input and get attention and self outputs.
 
- 7. class ViTIntermediate(nn.Module):
+### 7. class ViTIntermediate(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.dense = nn.Linear(config.hidden_size, config.intermediate_size)
@@ -246,7 +246,7 @@ This class is ViT attention layer, where we get selfattention and selfoutput ful
  ### Explanation:
  This is an intermediate class which inputs the hidden states processing it with dense and activation layers.
 
- 8. class ViTOutput(nn.Module):
+### 8. class ViTOutput(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.dense = nn.Linear(config.intermediate_size, config.hidden_size)
@@ -263,7 +263,7 @@ This class is ViT attention layer, where we get selfattention and selfoutput ful
 ### Explanation:
 This is Output class takes input the intermediate output and processes with dense and dropout layers.
 
- 9. class ViTLayer(nn.Module):
+### 9. class ViTLayer(nn.Module):
     """This corresponds to the Block class in the timm implementation."""
 
     def __init__(self, config):
@@ -307,7 +307,7 @@ This is Output class takes input the intermediate output and processes with dens
 ### Explanation:
  In this the whole ViT layer is defined with ViT Attention and ViT Intermediate and ViT Output, and two layer norm steps. all the connections are defined step to step to provide the output of ViT layer.
 
-10. class ViTEncoder(nn.Module):
+### 10. class ViTEncoder(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.config = config
@@ -362,7 +362,7 @@ This is Output class takes input the intermediate output and processes with dens
 ### Explanation:
 In this class takes the above ViT Layer and processes and gets hidden states and all hidden states and all self attentions as output.
 
-11. class ViTModel():
+### 11. class ViTModel():
     def __init__(self, config, add_pooling_layer=True):
         super().__init__(config)
         self.config = config
@@ -444,7 +444,7 @@ In this class takes the above ViT Layer and processes and gets hidden states and
   This is the ViT Model class takes  pixel_values, head_mask, output_attentions, output_hidden_states, return_dict based on available inputs.
   It creates sequence output and pooled_output from ViTpooler class, encoder outputs of hidden states and attentions.
 
-12. class ViTPooler(nn.Module):
+### 12. class ViTPooler(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.dense = nn.Linear(config.hidden_size, config.hidden_size)
