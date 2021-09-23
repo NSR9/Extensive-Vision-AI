@@ -1,4 +1,4 @@
-# Assignment 9 (Late Submission)
+# Building a Custom network for CIFAR 10 classification
 ## Problem statement:-
 
 1. Write a custom ResNet architecture for CIFAR10 that has the following architecture:
