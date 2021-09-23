@@ -1,4 +1,4 @@
-# Assignment 13 - ViT with Transformers
+# ViT with Transformers
 
 1. Let's review this blog  (Links to an external site.)on using ViT for Cats vs Dogs. Your assignment is to implement this blog and train the ViT model for Cats vs Dogs. If you wish you can use transfer learning.
 2. Share the link to the README that describes your CATS vs DOGS training using VIT. Expecting to see the training logs (at least 1) there.  
