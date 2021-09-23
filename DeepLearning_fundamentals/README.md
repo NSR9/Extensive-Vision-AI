@@ -1,6 +1,6 @@
 
 
-# Assignment 3
+# Fundamentals of Nueral Networks and Convolutions
 
 We have written our neural network to solve the problem for the assignment. We have used the MNIST dataset and modified with adding the random no.
 
