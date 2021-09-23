@@ -1,4 +1,4 @@
-# Assignment 4
+# BackPropogation and MNIST Classification
 
 ## Part 1
 
