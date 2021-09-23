@@ -1,4 +1,4 @@
-# Assignment 14 - DETR End-to-End Object Detection with Transformers
+# DETR End-to-End Object Detection with Transformers
 
 1. Take a look at this post (Links to an external site.), which explains how to fine-tune DETR on a custom dataset. 
 2. Replicate the process and train the model yourself. Everything (Links to an external site.) is mentioned in the post. The objectives are:
