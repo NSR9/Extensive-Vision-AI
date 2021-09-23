@@ -1,4 +1,4 @@
-# Assignment 8
+# CIFAR10 Classification using ResNet18
 ## Problem statement:-
 1. your colab file must
     * train resnet18 for 20 epochs on the CIFAR10 dataset
