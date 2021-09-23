@@ -1,4 +1,4 @@
-# Assignment 12 - The Dawn of the Transformers:
+# The Dawn of the Transformers:
 
 ## Problem Statement:
 
