@@ -1,23 +1,21 @@
-# Assignment 10 
+# TinyImagenet classification and K-means clustering of COCO dataset 
 ## Problem statement:-
 
-1. Assignment A:
+1. TinyImagenet Classification using Resnet:
     1. Download the TINY IMAGENET dataset. 
     2. Train ResNet18 on this dataset (70/30 split) for 50 Epochs. Target 50%+ Validation Accuracy.
-2. Assignment B:
+2. K-means clustering of anchor boxes on COCO dataset:
     1. Download the COCO dataset. 
     2. Identify these things for this dataset:
     3. readme data for class distribution (along with the class names) along with a graph 
     4. Calculate the Anchor Boxes for k = 3, 4, 5, 6 and draw them.
     5. Share the calculations for both via a notebook uploaded on your GitHub Repo
 
-# Assignment A
 
-[TINY IMAGENET dataset on ResNet18](https://github.com/NSR9/Extensive-Vision-AI/tree/main/Assignment_10/Part_A#readme)
+## Solutions
+1. [TINY IMAGENET dataset on ResNet18](https://github.com/NSR9/Extensive-Vision-AI/tree/main/Assignment_10/Part_A#readme)
 
-# Assignment B
-
-[K_means_clustering_anchor_boxes_sample_coco_dataset](https://github.com/NSR9/Extensive-Vision-AI/tree/main/Assignment_10/Part_B#readme)
+2. [K_means_clustering_anchor_boxes_sample_coco_dataset](https://github.com/NSR9/Extensive-Vision-AI/tree/main/Assignment_10/Part_B#readme)
 
 
 
