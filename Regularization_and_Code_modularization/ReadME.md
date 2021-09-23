@@ -1,4 +1,4 @@
-# **Session 6 - (Partial Late Assignment but on time)**
+# Adding Regularization methods and Modularizing the Code
 ## Problem Statement:-
 
 You are making 3 versions of your 5th assignment's best model (or pick one from best assignments):
